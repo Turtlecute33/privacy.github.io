@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="generator" content="Jekyll">
+  <title>Securely Wipe Disks and Delete Files</title>
+  <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Securely Wipe Disks and Delete Files | Brainf+ck</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Securely Wipe Disks and Delete Files" />
+<meta name="author" content="Brainf+ck" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hacking - Cyber Security and Privacy" />
+<meta property="og:description" content="Hacking - Cyber Security and Privacy" />
+<link rel="canonical" href="https://brainfucksec.github.io/securely-wipe-disks-and-delete-files" />
+<meta property="og:url" content="https://brainfucksec.github.io/securely-wipe-disks-and-delete-files" />
+<meta property="og:site_name" content="Brainf+ck" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Securely Wipe Disks and Delete Files" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Brainf+ck"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://brainfucksec.github.io/securely-wipe-disks-and-delete-files"},"description":"Hacking - Cyber Security and Privacy","url":"https://brainfucksec.github.io/securely-wipe-disks-and-delete-files","@type":"BlogPosting","headline":"Securely Wipe Disks and Delete Files","dateModified":"2021-10-16T00:00:00+00:00","datePublished":"2021-10-16T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="index.html">
+    <h1>~/</h1>
+    </a>
+    <div class="header-links">
+      <a href="posts.html"><h2 class="header-link">posts</h2></a>
+<a href="whoami.html"><h2 class="header-link">whoami</h2></a>
+<a href="dev.html"><h2 class="header-link">dev</h2></a>
+<a href="contacts.html"><h2 class="header-link">contacts</h2></a>
+<a href="atom.xml"><h2 class="header-link">rss</h2></a>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Securely Wipe Disks and Delete Files</h2>
+  <time datetime="2021-10-16T00:00:00+00:00" class="by-line">16 Oct 2021</time>
+  <p><br /></p>
+<h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#wipe-disk">Wipe Disk</a>
+    <ul>
+      <li><a href="#wipe-all-data-fast-with-zeros">Wipe All Data Fast With Zeros</a></li>
+      <li><a href="#write-pseudorandom-data">Write Pseudorandom Data</a></li>
+    </ul>
+  </li>
+  <li><a href="#wipe-a-single-file">Wipe A Single File</a></li>
+  <li><a href="#stay-safe">Stay Safe</a></li>
+</ul>
+<p><br /></p>
+<h1 id="introduction">Introduction</h1>
+<p>In this guide I will try to show you how to safely wipe disks and delete files, or at least, make data recovery quite hard.
+Secure data deletion is a complex matter, there are several factors that come in to play when you have to delete data from a memory, some of them are:</p>
+<ul>
+  <li>
+    <p><strong>The type of storage</strong>: Deleting data securely in <a href="https://en.wikipedia.org/wiki/Flash_memory">Flash memory</a> such as <a href="https://en.wikipedia.org/wiki/Solid-state_drive">Solid-State Drives (SSD)</a> or USB Pendrives, micro SD etc. is very difficult, and in some cases almost impossible.  For an explanation of deleting data in flash memories, see: <a href="https://en.wikipedia.org/wiki/Write_amplification">Write amplification</a>, <a href="legacy/events/fast11/tech/full_papers/Wei.pdf">Reliably Erasing Data From Flash-Based Solid State Drives</a>, <a href="https://security.stackexchange.com/questions/12503/can-wiped-ssd-data-be-recovered">stackexchange.com:questions/wipe-ssd</a>.  <a href="https://en.wikipedia.org/wiki/Hard_disk_drive">Hard disk drives</a> are different and you can get better results, but even with them remember that <strong>physical destruction remains the only 100% safe method.</strong></p>
+  </li>
+  <li>
+    <p><strong>Presence of duplicates or fragments and free space</strong>: Erasing single files is less effective, if the partition has been defragmented, resized or moved, or the files have been duplicated on the same device before. See: <a href="https://wiki.archlinux.org/title/Securely_wipe_disk/Tips_and_tricks#Wipe_a_single_file">Arch Wiki:Wipe a single file</a>.
+In file systems such as <a href="https://en.wikipedia.org/wiki/NTFS">NTFS</a> on Windows, files are scattered on the volume, so <a href="https://wiki.archlinux.org/title/Securely_wipe_disk/Tips_and_tricks#Wipe_free_space">cleaning the free space</a> is recommended.</p>
+  </li>
+</ul>
+<p>As the Arch Linux Wiki explains:</p>
+<p><em>Wiping a disk is done by writing new data over every single bit.</em></p>
+<p>..This is the general concept to follow when deleting data from a volume.  For more information about data that may remain after deletion, see:</p>
+<p><a href="https://en.wikipedia.org/wiki/Data_remanence">Wikipedia:Data remanence</a></p>
+<p><a href="https://wiki.archlinux.org/title/Securely_wipe_disk#Data_remanence">ArchWiki:Data remanence</a></p>
+<p><strong>Note:</strong> These operations should be performed in an isolated environment such as a Live Operating System or a virtual environment (VirtualBox, VMWare, QEMU, etc…).  The utilities and commands shown in the examples are mostly in the GNU/Linux environment but you can also find some examples for Windows :)</p>
+<h1 id="wipe-disk">Wipe Disk</h1>
+<h2 id="wipe-all-data-fast-with-zeros">Wipe All Data Fast With Zeros</h2>
+<p>The most common case is when the device is to be sold or given to someone else, You may need to protect your data from a simple forensic investigation or <a href="https://en.wikipedia.org/wiki/Data_recovery#File_Recovery">File Recovery</a> software in general.
+To delete everything quickly from a disk, writing zeros (i.e. <code class="language-plaintext highlighter-rouge">0</code>, <a href="https://en.wikipedia.org/wiki/dev/zero">/dev/zero</a>) allows maximum performance in terms of speed.</p>
+<p><strong>Zeros</strong></p>
+<p>Overwriting with /dev/zero or simple patterns is considered secure in most situations. With today’s HDDs, it is deemed appropriate and fast for disk wiping.
+However, a drive that is abnormally fast in writing patterns or zeroing could be doing transparent compression. It is obviously presumable not all blocks get wiped this way. Some <a href="https://wiki.archlinux.org/title/Securely_wipe_disk#Flash_memory">#Flash memory</a> devices do “feature” that.</p>
+<p>Source: <a href="https://wiki.archlinux.org/title/Securely_wipe_disk#Data_remanence">ArchWiki:Data remanence</a></p>
+<p>A single, full overwrite with zeros or random data does not lead to any recoverable data on a modern high-density storage device, the common view is that repeating the operation after a full overwrite should not be necessary nowadays.</p>
+<p>See: <a href="https://security.stackexchange.com/questions/26132/is-data-remanence-a-myth/26134#26134">1</a>, <a href="https://www.howtogeek.com/115573/htg-explains-why-you-only-have-to-wipe-a-disk-once-to-erase-it/">2</a>, <a href="https://security.stackexchange.com/questions/89994/why-is-writing-zeros-or-random-data-over-a-hard-drive-used-when-writing-all-on">3</a></p>
+<p>However there are different opinions about it.</p>
+<p>Now let’s look at the different methods for writing zeros (0) on a volume:</p>
+<h2 id="dd"><a href="https://www.gnu.org/software/coreutils/dd">dd</a></h2>
+<p>Writes zero bytes to the entire volume using the <a href="https://en.wikipedia.org/wiki/dev/zero">/dev/zero</a> stream:</p>
+<p>There is no confirmation regarding for this command so <strong>double-check</strong> that the correct drive or partition has been targeted.</p>
+<pre><code class="language-term">dd if=/dev/zero of=/dev/sdX bs=4096 status=progress
+</code></pre>
+<p>Where <code class="language-plaintext highlighter-rouge">/dev/sdX</code> is the name of the partition that you want to erase (e.g. <code class="language-plaintext highlighter-rouge">/dev/sda</code>), see: <a href="https://wiki.archlinux.org/title/Securely_wipe_disk#Select_a_target">#Securely wipe disk: Select a target</a>, the process is finished when dd reports <code class="language-plaintext highlighter-rouge">No space left on device</code>:</p>
+<pre><code class="language-term">dd: writing to ‘/dev/sdX’: No space left on device
+7959553+0 records in
+7959552+0 records out
+4075290624 bytes (4.1 GB, 3.8 GiB) copied, 1247.7 s, 3.3 MB/s
+</code></pre>
+<h2 id="windows-format"><a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/format">Windows format</a></h2>
+<p>On Windows You can use the <code class="language-plaintext highlighter-rouge">format</code> command:</p>
+<p>Format the drive with the selected file system and write zeros to every sector of the drive once.</p>
+<pre><code class="language-cmd">format g: /fs:NTFS /p:0
+</code></pre>
+<p>Where <code class="language-plaintext highlighter-rouge">g</code> is the name of the volume <code class="language-plaintext highlighter-rouge">G</code> and <code class="language-plaintext highlighter-rouge">NTFS</code> is the selected file system.</p>
+<h2 id="write-pseudorandom-data">Write Pseudorandom Data</h2>
+<p>If you want to rewrite the record in addition to the zeros, for example to prepare a drive for <strong>block device encryption</strong> inside the wiped area afterwards, it is recommended to use Random Data generated by a cryptographically strong random number generator referred as a “RNG”.</p>
+<p>True random data source using <code class="language-plaintext highlighter-rouge">/dev/random</code> is impractical for wiping large capacities as it will take too long to wait for the entropy generation.  Then <code class="language-plaintext highlighter-rouge">/dev/urandom</code> can be used as a reasonable source of <a href="https://en.wikipedia.org/wiki/Pseudorandom_number_generator">Pseudorandom data</a>.</p>
+<p>For differences between random and pseudorandom data and other information about, please see:</p>
+<p><a href="https://wiki.archlinux.org/title/Random_number_generation">ArchWiki:Random Number Generation</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Random_number_generation">Wikipedia:Random number generation</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Cryptographically-secure_pseudorandom_number_generator">Wikipedia:Cryptographically-secure pseudorandom number generator (CSPRNG)</a></p>
+<h2 id="redirect-output-cat-xz-dd-and-cp-commands">Redirect output: cat, xz, dd and cp commands</h2>
+<p>Redirected output, rewrite the partition or a block device by redirecting <code class="language-plaintext highlighter-rouge">stdout</code> from other utilities (cat, xz, dd):</p>
+<pre><code class="language-term">cat /dev/urandom &gt; /dev/sdXY
+...
+cat: write error: No space left on device
+</code></pre>
+<pre><code class="language-term">xz -z0 /dev/urandom -c &gt; /dev/sdXY
+...
+xz: (stdout): Write error: No space left on device
+</code></pre>
+<pre><code class="language-term">dd if=/dev/urandom of=/dev/sdX bs=4096 status=progress
+...
+dd: writing to ‘/dev/sdX’: No space left on device
+7959553+0 records in
+7959552+0 records out
+4075290624 bytes (4.1 GB, 3.8 GiB) copied, 1247.7 s, 3.3 MB/s
+</code></pre>
+<p>also you can use the command <code class="language-plaintext highlighter-rouge">cp</code> to rewrite the device:</p>
+<pre><code class="language-term">cp /dev/urandom /dev/sdXY
+...
+cp: error writing ‘/dev/sd"XY"’: No space left on device
+cp: failed to extend ‘/dev/sd"XY"’: No space left on device
+</code></pre>
+<p>With all the commands listed the procedure ends with an error message of “No space left on device”, it means that the program has written all sectors of the volume, so it’s all ok :)</p>
+<p>In the examples <code class="language-plaintext highlighter-rouge">/dev/sdX</code> and <code class="language-plaintext highlighter-rouge">/dev/sdXY</code> are relative to the name of the chosen partitions:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/sdX <span class="o">=</span> sda
+/dev/sdXY <span class="o">=</span> sda1
+</code></pre></div></div>
+<h2 id="shred"><a href="https://www.gnu.org/software/coreutils/manual/html_node/shred-invocation.html">shred</a></h2>
+<p>shred is a Unix utility for delete individual files or full devices. By default <code class="language-plaintext highlighter-rouge">shred</code> uses 3 passes, writing pseudorandom data to the device at each pass.</p>
+<p>Run <code class="language-plaintext highlighter-rouge">shred</code> with default settings and show progress:</p>
+<pre><code class="language-term">shred -v /dev/sdX
+</code></pre>
+<p>shred can be used also on a single partition:</p>
+<pre><code class="language-term">shred -v /dev/sdX1
+</code></pre>
+<p>Use shred to write only 1 pass, but with entropy from <code class="language-plaintext highlighter-rouge">/dev/urandom</code>:</p>
+<pre><code class="language-term">shred -v --random-source=/dev/urandom -n1 /dev/sdX
+</code></pre>
+<h2 id="dd-advanced-example">dd advanced example</h2>
+<p>To speed up wiping a large drive, you can also use this trick :)</p>
+<p>Randomize the data using a randomly-seeded AES cipher from OpenSSL and write them with <code class="language-plaintext highlighter-rouge">dd</code>:</p>
+<pre><code class="language-term">DEVICE="/dev/sdX"
+PASS=$(tr -cd '[:alnum:]' &lt; /dev/urandom | head -c128)
+openssl enc -aes-256-ctr -pass pass:"$PASS" -nosalt &lt;/dev/zero | dd obs=64K ibs=4K of=$DEVICE oflag=direct status=progress
+</code></pre>
+<p>The command above creates a 128 byte encryption key seeded from /dev/urandom. AES-256 in CTR mode is used to encrypt /dev/zero’s output with the urandom key. Utilizing the cipher instead of a pseudorandom source results in very high write speeds and the result is a device filled with AES ciphertext.</p>
+<p>Source: <a href="https://wiki.archlinux.org/title/Securely_wipe_disk/Tips_and_tricks#dd_-_advanced_example">Securely wipe disk/Tips and tricks#dd - advanced example</a></p>
+<h2 id="dban"><a href="https://dban.org/">DBAN</a></h2>
+<p>DBAN is software for delete information stored on hard disk drives (HDDs, not SSDs) in PC laptops, desktops, or servers. The program is in .iso format so it must be installed by creating a pendrive USB or CD bootable.
+Basically the program performs the operations we have seen above, you can install it on a USB pendrive for example, then select at boot priority the volume with DBAN for start it.</p>
+<p>In the main menu we can see the available options with a command prompt to type commands:</p>
+<p><img src="uploads/img/posts/securely-wipe-disks-and-delete-files/dban-1.png" alt="alt text" /></p>
+<p>Pressing <code class="language-plaintext highlighter-rouge">F3</code> displays the list of available commands:</p>
+<p><img src="uploads/img/posts/securely-wipe-disks-and-delete-files/dban-2.png" alt="alt text" /></p>
+<p>Use the command <code class="language-plaintext highlighter-rouge">dod</code> for wipe the disk with method: <a href="https://csrc.nist.gov/publications/detail/sp/800-88/rev-1/final">DoD 5220.22-M</a></p>
+<p><img src="uploads/img/posts/securely-wipe-disks-and-delete-files/dban-3.png" alt="alt text" /></p>
+<p>Then the program starts wipe the disk, (be careful because there is no confirmation after the commands):</p>
+<p><img src="uploads/img/posts/securely-wipe-disks-and-delete-files/dban-4.png" alt="alte text" /></p>
+<p>DBAN also offers an interactive mode, which can be accessed by pressing the <code class="language-plaintext highlighter-rouge">Enter</code> key.
+In the interactive mode, press <code class="language-plaintext highlighter-rouge">Space</code> key for select the volume you want to erase:</p>
+<p><img src="uploads/img/posts/securely-wipe-disks-and-delete-files/dban-5.png" alt="alt text" /></p>
+<p>Press <code class="language-plaintext highlighter-rouge">M</code> for select the wipe method:</p>
+<p><img src="uploads/img/posts/securely-wipe-disks-and-delete-files/dban-6.png" alt="alt text" /></p>
+<p>After selecting the preferred method, press <code class="language-plaintext highlighter-rouge">F10</code> to start the wipe:</p>
+<p><img src="uploads/img/posts/securely-wipe-disks-and-delete-files/dban-7.png" alt="alt text" /></p>
+<p>For more information about this program see <a href="https://dban.org/help-center/">the documentation</a> on the official website.</p>
+<h1 id="wipe-a-single-file">Wipe a Single File</h1>
+<p>As shown above, when deleting a single file you must take into account some limitations, there may be copies, links or metadata of the file scattered on the same or other volumes, the type of file system is another factor that affects deletion, see: <a href="https://en.wikipedia.org/wiki/Comparison_of_file_systems#Metadata">Comparison of file systems#Metadata</a>.</p>
+<h2 id="shred-1">shred</h2>
+<p>Use shred to delete a file overwriting 7 times and add a final overwrite with zeros to hide shredding</p>
+<pre><code class="language-term">shred -uvzn 7 myfile.txt
+</code></pre>
+<pre><code class="language-term">-u  deallocate and remove file after overwriting
+-v  show progress
+-z  add a final overwrite with zeros to hide shredding
+-n  overwrite N times instead of the default (3)
+</code></pre>
+<p>See: <code class="language-plaintext highlighter-rouge">shred --help</code> for more information</p>
+<p>You can delete a folder recursively using <code class="language-plaintext highlighter-rouge">shred</code> and <code class="language-plaintext highlighter-rouge">find</code>:</p>
+<pre><code class="language-term">find mydirectory -type f -exec shred {} \;
+</code></pre>
+<h2 id="srm-secure-rm"><a href="https://sourceforge.net/projects/srm/">srm (secure rm)</a></h2>
+<p>ON Unix and Windows you can use the command line program <code class="language-plaintext highlighter-rouge">srm</code> for securely delete files and folders.</p>
+<p>Remove a file and overwrite with <a href="https://www.destructdata.com/dod-standard">7 US DoD compliant passes</a>:</p>
+<pre><code class="language-term">srm -Dv myfile.txt
+</code></pre>
+<p>Remove a folder with 7 US DoD compliant passes:</p>
+<pre><code class="language-term">srm -DRv myfolder/
+</code></pre>
+<p>…by default <code class="language-plaintext highlighter-rouge">srm</code> use the <a href="https://en.wikipedia.org/wiki/Gutmann_method">35-pass Gutmann</a> method to overwrite files which can be very slow, for a complete list of options see the command help <code class="language-plaintext highlighter-rouge">srm -h</code>.</p>
+<h1 id="stay-safe">Stay Safe</h1>
+<p>In short, we’ve learned that securely wiping disks and deleting files is not a simple matter. So if we need to eliminate data we have to follow certain procedures, as always in computer security, paranoia is a good friend, so here are some tips on how to prevent sensitive files from falling into the hands of third parties:</p>
+<p><strong>Encrypt your disk</strong></p>
+<p>The first countermeasure is to encrypt the volume/disk, this is the first layer of data protection in a device.  Therefore, before thinking about how to delete a file you have to think about how to protect the volume in which it is contained. If you do not have the key to decrypt the volume, the file can be considered lost.
+However, if you need to clean a disk, you can encrypt the disk, throw away the key and rewrite it thus making the data inaccessible, or rather “very difficult to recover”.</p>
+<p><strong>If you really need to delete data, destroy the device</strong></p>
+<p>As for me I try to use any electronic device until his death, but in this case if we want to be 100% sure of the deletion of the data then we have to destroy the device.
+Furthermore, we understand that with Flash memories the procedures for deleting files are more complex and are often ineffective.
+So <a href="https://piped.kavin.rocks/watch?v=sAxbn6DgNjU">destroy the device!</a>.</p>
+<hr />
+<h2 id="credits">Credits:</h2>
+<p><a href="https://wiki.archlinux.org/title/Securely_wipe_disk">ArchWiki - Securely Wipe Disk</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Data_remanence">Wikipedia - Data remanence</a></p>
+<p><a href="https://www.gnu.org/software/coreutils/">GNU Coreutils</a></p>
+<p><a href="https://dban.org/">Data Removal: Darik’s Boot and Nuke - DBAN</a></p>
+<p><a href="https://sourceforge.net/projects/srm/">secure rm</a></p>
+</article>
+      </section>
+    </div>
+  </div>
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Brainf+ck</b>
+    </span>
+    <span>© 2021</span>
+  </a>
+</footer>
+  <!-- Google Analytics
+  -->
+</body>
+</html>

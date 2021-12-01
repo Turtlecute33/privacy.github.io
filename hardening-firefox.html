@@ -4,26 +4,26 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <meta name="generator" content="Jekyll">
-  <title>Hardening Firefox - September 2021 Update</title>
+  <title>Hardening Firefox</title>
   <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
   <link rel="stylesheet" href="css/main.css">
   <link href="atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Hardening Firefox - September 2021 Update | Brainf+ck</title>
+<title>Hardening Firefox | Brainf+ck</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Hardening Firefox - September 2021 Update" />
+<meta property="og:title" content="Hardening Firefox" />
 <meta name="author" content="Brainf+ck" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Hacking - Cyber Security and Privacy" />
 <meta property="og:description" content="Hacking - Cyber Security and Privacy" />
-<link rel="canonical" href="https://brainfucksec.github.io/hardening-firefox-sep-2021-update" />
-<meta property="og:url" content="https://brainfucksec.github.io/hardening-firefox-sep-2021-update" />
+<link rel="canonical" href="https://brainfucksec.github.io/hardening-firefox" />
+<meta property="og:url" content="https://brainfucksec.github.io/hardening-firefox" />
 <meta property="og:site_name" content="Brainf+ck" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-09-29T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-03-18T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Hardening Firefox - September 2021 Update" />
+<meta property="twitter:title" content="Hardening Firefox" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Brainf+ck"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://brainfucksec.github.io/hardening-firefox-sep-2021-update"},"description":"Hacking - Cyber Security and Privacy","url":"https://brainfucksec.github.io/hardening-firefox-sep-2021-update","@type":"BlogPosting","headline":"Hardening Firefox - September 2021 Update","dateModified":"2021-09-29T00:00:00+00:00","datePublished":"2021-09-29T00:00:00+00:00","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Brainf+ck"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://brainfucksec.github.io/hardening-firefox"},"description":"Hacking - Cyber Security and Privacy","url":"https://brainfucksec.github.io/hardening-firefox","@type":"BlogPosting","headline":"Hardening Firefox","dateModified":"2021-03-18T00:00:00+00:00","datePublished":"2021-03-18T00:00:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
 <body>
@@ -45,41 +45,17 @@
     <div class="container">
       <section id="main_content">
         <article>
-  <h2>Hardening Firefox - September 2021 Update</h2>
-  <time datetime="2021-09-29T00:00:00+00:00" class="by-line">29 Sep 2021</time>
+  <h2>Hardening Firefox</h2>
+  <time datetime="2021-03-18T00:00:00+00:00" class="by-line">18 Mar 2021</time>
   <p><br /></p>
 <p>This is my personal configuration for hardening Mozilla Firefox while maintaining usability, plugins are minimized to avoid fingerprinting (yes, installing multiple privacy plugins results in making the browser more unique).</p>
-<p>At the time of writing Mozilla Firefox is at version 92.0.1, remember to check the settings at each update.</p>
-<p><br /></p>
-<h2 id="backup-firefox-profile">Backup Firefox profile</h2>
-<p>Before changing the configuration, you should make a backup of the default profile, or create a new profile with the new settings.</p>
-<p>To back up your profile, first close Firefox if it is open and then copy the default profile folder to another location, for example on Linux the profile folder is:</p>
-<p><code class="language-plaintext highlighter-rouge">~/.mozilla/firefox/xxxxxxxx.default</code></p>
-<p>when “xxxxxxxx” is the ID of your profile.</p>
-<p>See: <a href="https://support.mozilla.org/en-US/kb/back-and-restore-information-firefox-profiles">Back up and restore information in Firefox profiles</a></p>
-<p>If you want to create new profile see: <a href="https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles?redirectslug=profile-manager-create-and-remove-firefox-profiles&amp;redirectlocale=en-US">Create, remove or switch Firefox profiles</a> (also, see <a href="#multiple-profiles">Multiple profiles</a> downward).</p>
-<h2 id="firefox-preferences">Firefox Preferences</h2>
-<p><strong>Download folder location</strong></p>
-<ul>
-  <li>
-    <p>Click on <code class="language-plaintext highlighter-rouge">Edit -&gt; Settings</code></p>
-  </li>
-  <li>
-    <p>Go to <code class="language-plaintext highlighter-rouge">General -&gt; Files and Applications</code>, select <code class="language-plaintext highlighter-rouge">Always ask you where to save files</code></p>
-  </li>
-</ul>
-<p><strong>Search Engine preferences</strong></p>
-<ul>
-  <li>
-    <p>Go to <code class="language-plaintext highlighter-rouge">Search -&gt; Default Search Engine</code>, select <code class="language-plaintext highlighter-rouge">DuckDuckGo</code>, then to <code class="language-plaintext highlighter-rouge">Search -&gt; Search Shortcuts</code>, select <code class="language-plaintext highlighter-rouge">DuckDuckGo</code></p>
-  </li>
-  <li>
-    <p>Remove all other search engines</p>
-  </li>
-</ul>
-<h2 id="aboutconfig">about:config</h2>
+<h3 id="firefox-preferences">Firefox Preferences</h3>
+<p>Click on <code class="language-plaintext highlighter-rouge">Edit -&gt; Preferences</code></p>
+<p>Go to <code class="language-plaintext highlighter-rouge">General &gt; Files and Applications</code>, select <code class="language-plaintext highlighter-rouge">Always ask you where to save files</code></p>
+<p>Go to <code class="language-plaintext highlighter-rouge">Search &gt; Default Search Engine</code>, select <code class="language-plaintext highlighter-rouge">DuckDuckGo</code></p>
+<p>Go to <code class="language-plaintext highlighter-rouge">Search &gt; Search Shortcuts</code>, select <code class="language-plaintext highlighter-rouge">DuckDuckGo</code>, remove all other search engines</p>
+<h3 id="aboutconfig">about:config</h3>
 <p>On the search bar insert: <code class="language-plaintext highlighter-rouge">about:config</code>, sets the values for the parameters as follow:</p>
-<p><code class="language-plaintext highlighter-rouge">option</code> = <code class="language-plaintext highlighter-rouge">value</code></p>
 <p><strong>StartUp Settings</strong></p>
 <ul>
   <li>
@@ -91,20 +67,18 @@
     <p><code class="language-plaintext highlighter-rouge">browser.newtabpage.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">browser.newtab.preload</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.feeds.telemetry</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-    <p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.telemetry</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.feeds.snippets</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.feeds.section.topstories</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.section.highlights.includePocket</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.showSponsored</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.feeds.discoverystreamfeed</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-    <p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.showSponsoredTopSites</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.default.sites</code> = <code class="language-plaintext highlighter-rouge">""</code></p>
   </li>
 </ul>
 <p><strong>Geolocation</strong></p>
 <ul>
   <li>
-    <p>Use Mozilla geolocation service instead of Google if permission is granted:</p>
+    <p>Use Mozilla geolocation service instead of Google:</p>
     <p><code class="language-plaintext highlighter-rouge">geo.provider.network.url</code> = <code class="language-plaintext highlighter-rouge">https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%</code></p>
   </li>
   <li>
@@ -115,7 +89,6 @@
   </li>
   <li>
     <p>Disable region updates:</p>
-    <p><code class="language-plaintext highlighter-rouge">browser.region.network.url</code> = <code class="language-plaintext highlighter-rouge">""</code></p>
     <p><code class="language-plaintext highlighter-rouge">browser.region.update.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
   </li>
 </ul>
@@ -124,29 +97,28 @@
   <li>
     <p>Set language for displaying web pages:</p>
     <p><code class="language-plaintext highlighter-rouge">intl.accept_languages</code> = <code class="language-plaintext highlighter-rouge">en-US, en</code></p>
-    <p><code class="language-plaintext highlighter-rouge">javascript.use_us_english_locale</code> = <code class="language-plaintext highlighter-rouge">true</code> (Hidden Pref)</p>
+    <p><code class="language-plaintext highlighter-rouge">javascript.use_us_english_locale</code> = <code class="language-plaintext highlighter-rouge">true</code> (Hidden value)</p>
   </li>
 </ul>
-<p><strong>Auto-updates and Recommendations</strong></p>
+<p><strong>Firefox Features</strong></p>
 <ul>
   <li>
     <p>Disable auto-INSTALLING Firefox updates:</p>
-    <p><code class="language-plaintext highlighter-rouge">app.update.auto</code> = <code class="language-plaintext highlighter-rouge">false</code> (Non-Windows)</p>
-    <p><code class="language-plaintext highlighter-rouge">app.update.background.scheduling.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code> (Windows)</p>
+    <p><code class="language-plaintext highlighter-rouge">app.update.auto</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Disable sending the URL of the website where a plugin crashed:</p>
+    <p><code class="language-plaintext highlighter-rouge">dom.ipc.plugins.reportCrashURL</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
   </li>
   <li>
     <p>Disable addons recommendations (uses Google Analytics):</p>
-    <p><code class="language-plaintext highlighter-rouge">extensions.getAddons.showPane</code> = <code class="language-plaintext highlighter-rouge">false</code> (Hidden Pref)</p>
+    <p><code class="language-plaintext highlighter-rouge">extensions.getAddons.showPane</code> = <code class="language-plaintext highlighter-rouge">false</code> (Hidden value)</p>
     <p><code class="language-plaintext highlighter-rouge">extensions.htmlaboutaddons.recommendations.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
   </li>
-</ul>
-<p><strong>Telemetry</strong></p>
-<ul>
   <li>
     <p>Disable telemetry:</p>
-    <p><code class="language-plaintext highlighter-rouge">datareporting.healthreport.uploadEnabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">toolkit.telemetry.unified</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-    <p><code class="language-plaintext highlighter-rouge">toolkit.telemetry.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code> (as default)</p>
+    <p><code class="language-plaintext highlighter-rouge">toolkit.telemetry.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">toolkit.telemetry.server</code> = <code class="language-plaintext highlighter-rouge">data:,</code></p>
     <p><code class="language-plaintext highlighter-rouge">toolkit.telemetry.archive.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">toolkit.telemetry.newProfilePing.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
@@ -154,26 +126,18 @@
     <p><code class="language-plaintext highlighter-rouge">toolkit.telemetry.updatePing.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">toolkit.telemetry.bhrPing.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">toolkit.telemetry.firstShutdownPing.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-    <p><code class="language-plaintext highlighter-rouge">toolkit.telemetry.coverage.opt-out</code> = <code class="language-plaintext highlighter-rouge">true</code> (Hidden Pref)</p>
-    <p><code class="language-plaintext highlighter-rouge">toolkit.coverage.opt-out</code> = <code class="language-plaintext highlighter-rouge">true</code> (Hidden Pref)</p>
+    <p><code class="language-plaintext highlighter-rouge">toolkit.telemetry.coverage.opt-out</code> = <code class="language-plaintext highlighter-rouge">true</code> (Hidden value)</p>
+    <p><code class="language-plaintext highlighter-rouge">toolkit.coverage.opt-out</code> = <code class="language-plaintext highlighter-rouge">true</code> (Hidden value)</p>
     <p><code class="language-plaintext highlighter-rouge">toolkit.coverage.endpoint.base</code> = <code class="language-plaintext highlighter-rouge">""</code></p>
-    <p><code class="language-plaintext highlighter-rouge">browser.ping-centre.telemetry</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
   </li>
-</ul>
-<p><strong>Studies</strong></p>
-<ul>
+  <li>
+    <p>Disable health reports:</p>
+    <p><code class="language-plaintext highlighter-rouge">datareporting.healthreport.uploadEnabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
+  </li>
   <li>
     <p>Disable studies:</p>
     <p><code class="language-plaintext highlighter-rouge">datareporting.policy.dataSubmissionEnable</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
   </li>
-  <li>
-    <p>Disable normandy/shield:</p>
-    <p><code class="language-plaintext highlighter-rouge">app.normandy.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-    <p><code class="language-plaintext highlighter-rouge">app.normandy.api_url</code> = <code class="language-plaintext highlighter-rouge">""</code></p>
-  </li>
-</ul>
-<p><strong>Crash Reports</strong></p>
-<ul>
   <li>
     <p>Disable crash reports:</p>
     <p><code class="language-plaintext highlighter-rouge">breakpad.reportURL</code> = <code class="language-plaintext highlighter-rouge">""</code></p>
@@ -181,9 +145,6 @@
     <p><code class="language-plaintext highlighter-rouge">browser.crashReports.unsubmittedCheck.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">browser.crashReports.unsubmittedCheck.autoSubmit2</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
   </li>
-</ul>
-<p><strong>Captive Portal Detection / Network Checks</strong></p>
-<ul>
   <li>
     <p>Disable captive portal detection:</p>
     <p><code class="language-plaintext highlighter-rouge">captivedetect.canonicalURL</code> = <code class="language-plaintext highlighter-rouge">""</code></p>
@@ -193,16 +154,24 @@
     <p>Disable network connectivity checks:</p>
     <p><code class="language-plaintext highlighter-rouge">network.connectivity-service.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
   </li>
-</ul>
-<p><strong>Safe Browsing</strong></p>
-<ul>
   <li>
     <p>Disable Safe Browsing service:</p>
     <p><code class="language-plaintext highlighter-rouge">browser.safebrowsing.downloads.remote.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
     <p><code class="language-plaintext highlighter-rouge">browser.safebrowsing.downloads.remote.url</code> = <code class="language-plaintext highlighter-rouge">""</code></p>
   </li>
 </ul>
-<p><strong>Prefetching</strong></p>
+<p><strong>System Add-ons</strong></p>
+<ul>
+  <li>
+    <p>Disable form autofill:</p>
+    <p><code class="language-plaintext highlighter-rouge">extensions.formautofill.addresses.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
+    <p><code class="language-plaintext highlighter-rouge">extensions.formautofill.available</code> = <code class="language-plaintext highlighter-rouge">off</code></p>
+    <p><code class="language-plaintext highlighter-rouge">extensions.formautofill.creditCards.available</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
+    <p><code class="language-plaintext highlighter-rouge">extensions.formautofill.creditCards.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
+    <p><code class="language-plaintext highlighter-rouge">extensions.formautofill.heuristics.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
+  </li>
+</ul>
+<p><strong>Network</strong></p>
 <ul>
   <li>
     <p>Disable link prefetching:</p>
@@ -210,34 +179,21 @@
   </li>
   <li>
     <p>Disable DNS prefetching:</p>
-    <p><code class="language-plaintext highlighter-rouge">network.dns.disablePrefetch</code> = <code class="language-plaintext highlighter-rouge">true</code></p>
+    <p><code class="language-plaintext highlighter-rouge">network.dns.disablePrefetch</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
   </li>
-  <li>
-    <p>Disable predictor:</p>
-    <p><code class="language-plaintext highlighter-rouge">network.predictor.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-  </li>
-</ul>
-<p><strong>Network</strong></p>
-<ul>
   <li>
     <p>Disable IPv6:</p>
     <p><code class="language-plaintext highlighter-rouge">network.dns.disableIPv6</code> = <code class="language-plaintext highlighter-rouge">true</code></p>
   </li>
 </ul>
-<p><strong>Search Bar / Autofill</strong></p>
+<p><strong>Search / History</strong></p>
 <ul>
   <li>
-    <p>Display all parts of the url in the bar:</p>
-    <p><code class="language-plaintext highlighter-rouge">browser.urlbar.trimURLs</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
+    <p>Disable search and form history:</p>
+    <p><code class="language-plaintext highlighter-rouge">browser.formfill.enable</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
   </li>
   <li>
-    <p>Disable form autofill:</p>
-    <p><code class="language-plaintext highlighter-rouge">browser.formfill.enable</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-    <p><code class="language-plaintext highlighter-rouge">extensions.formautofill.addresses.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-    <p><code class="language-plaintext highlighter-rouge">extensions.formautofill.available</code> = <code class="language-plaintext highlighter-rouge">off</code></p>
-    <p><code class="language-plaintext highlighter-rouge">extensions.formautofill.creditCards.available</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-    <p><code class="language-plaintext highlighter-rouge">extensions.formautofill.creditCards.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-    <p><code class="language-plaintext highlighter-rouge">extensions.formautofill.heuristics.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
+    <p>Disable auto-filling username & password:</p>
     <p><code class="language-plaintext highlighter-rouge">signon.autofillForms</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
   </li>
 </ul>
@@ -251,23 +207,25 @@
     <p>Disable storing extra session data:</p>
     <p><code class="language-plaintext highlighter-rouge">browser.sessionstore.privacy_level</code> = <code class="language-plaintext highlighter-rouge">2</code></p>
   </li>
-  <li>
-    <p>Set the minimum interval between session save operations:</p>
-    <p><code class="language-plaintext highlighter-rouge">browser.sessionstore.interval</code> = <code class="language-plaintext highlighter-rouge">30000</code></p>
-  </li>
 </ul>
 <p><strong>Headers / Referers</strong></p>
 <ul>
   <li>
-    <p>Control when to send a referer (0=always (default), 1=only if base domains match, 2=only if hosts match):</p>
+    <p>Control when to send a referer:</p>
+  </li>
+  <li>
+    <p>0=always (default), 1=only if base domains match, 2=only if hosts match.</p>
     <p><code class="language-plaintext highlighter-rouge">network.http.referer.XOriginPolicy</code> = <code class="language-plaintext highlighter-rouge">2</code></p>
   </li>
   <li>
-    <p>Control the amount of information to send (0=send full URI (default), 1=scheme+host+port+path, 2=scheme+host+port):</p>
+    <p>Control the amount of information to send:</p>
+  </li>
+  <li>
+    <p>0=send full URI (default), 1=scheme+host+port+path, 2=scheme+host+port.</p>
     <p><code class="language-plaintext highlighter-rouge">network.http.referer.XOriginTrimmingPolicy</code> = <code class="language-plaintext highlighter-rouge">2</code></p>
   </li>
 </ul>
-<p><strong>WebRTC</strong></p>
+<p><strong>Audio / Camera / Mic</strong></p>
 <ul>
   <li>
     <p>Disable WebRTC:</p>
@@ -279,13 +237,34 @@
     <p><code class="language-plaintext highlighter-rouge">media.peerconnection.ice.no_host</code> = <code class="language-plaintext highlighter-rouge">true</code></p>
     <p><code class="language-plaintext highlighter-rouge">media.peerconnection.ice.proxy_only_if_behind_proxy</code> = <code class="language-plaintext highlighter-rouge">true</code></p>
   </li>
+  <li>
+    <p>Disable WebGL (Web Graphics Library):</p>
+    <p><code class="language-plaintext highlighter-rouge">webgl.disabled</code> = <code class="language-plaintext highlighter-rouge">true</code></p>
+    <p><code class="language-plaintext highlighter-rouge">webgl.enable-webgl2</code> = <code class="language-plaintext highlighter-rouge">true</code></p>
+  </li>
+  <li>
+    <p>Limit WebGL when is used:</p>
+    <p><code class="language-plaintext highlighter-rouge">webgl.min_capability_mode</code> = <code class="language-plaintext highlighter-rouge">true</code></p>
+  </li>
+  <li>
+    <p>Disable screensharing:</p>
+    <p><code class="language-plaintext highlighter-rouge">media.getusermedia.screensharing.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
+    <p><code class="language-plaintext highlighter-rouge">media.getusermedia.browser.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
+    <p><code class="language-plaintext highlighter-rouge">media.getusermedia.audiocapture.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Disable autoplay of HTML5 media if you interacted with the site:</p>
+    <p><code class="language-plaintext highlighter-rouge">media.autoplay.blocking_policy</code> = <code class="language-plaintext highlighter-rouge">2</code></p>
+  </li>
 </ul>
 <p><strong>Cookies</strong></p>
 <ul>
   <li>
     <p>Disable 3rd-party cookies and site-data:</p>
+  </li>
+  <li>
+    <p>0=Accept cookies and site data, 1=(Block) All third-party cookies, 2=(Block) All cookies, 3=(Block) Cookies from unvisited websites, 4=(Block) Cross-site and social media trackers (default).</p>
     <p><code class="language-plaintext highlighter-rouge">network.cookie.cookieBehavior</code> = <code class="language-plaintext highlighter-rouge">1</code></p>
-    <p><code class="language-plaintext highlighter-rouge">browser.contentblocking.category</code> = <code class="language-plaintext highlighter-rouge">custom</code></p>
   </li>
 </ul>
 <p><strong>Shutdown</strong></p>
@@ -303,28 +282,14 @@
     <p><code class="language-plaintext highlighter-rouge">privacy.clearOnShutdown.sitesettings</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
   </li>
 </ul>
-<p><strong>WebGL (Web Graphics Library)</strong></p>
-<ul>
-  <li>
-    <p>Disable WebGL:</p>
-    <p><code class="language-plaintext highlighter-rouge">webgl.disabled</code> = <code class="language-plaintext highlighter-rouge">true</code></p>
-  </li>
-</ul>
 <p><strong>User-Agent</strong></p>
 <ul>
   <li>
-    <p>Create new <code class="language-plaintext highlighter-rouge">string</code> value and assign the preferred user-agent, for example to set a Windows 10 user agent:</p>
-    <p><code class="language-plaintext highlighter-rouge">general.useragent.override</code> = <code class="language-plaintext highlighter-rouge">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0</code></p>
+    <p>Create new <code class="language-plaintext highlighter-rouge">string</code> value and assign the preferred user-agent:</p>
+    <p><code class="language-plaintext highlighter-rouge">general.useragent.override</code> = <code class="language-plaintext highlighter-rouge">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0</code></p>
   </li>
 </ul>
-<p><strong>HTTPS</strong></p>
-<ul>
-  <li>
-    <p>Set “HTTPS-only mode”:</p>
-    <p>To enable this feature go to <code class="language-plaintext highlighter-rouge">Edit -&gt; Settings -&gt; Privacy & Security -&gt; HTTPS-Only Mode</code> then select <code class="language-plaintext highlighter-rouge">Enable HTTPS-Only Mode in all windows</code></p>
-  </li>
-</ul>
-<h2 id="add-ons">Add-ons</h2>
+<h3 id="add-ons">Add-ons</h3>
 <p><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a></p>
 <ul>
   <li>
@@ -337,52 +302,43 @@
   </li>
   <li>
     <p>Enable additional blocklists:</p>
-    <p>In the dashboard select <code class="language-plaintext highlighter-rouge">Filter lists</code>, this is my lists selection (you can select your favorite ones):</p>
+    <p>In the dashboard select <code class="language-plaintext highlighter-rouge">Filter lists</code>, then enable the following lists (or your favorite ones):</p>
     <ul>
-      <li>Ads:
-        <ul>
-          <li>EasyList</li>
-        </ul>
-      </li>
-      <li>Privacy:
-        <ul>
-          <li>AdGuard Tracking Protection</li>
-          <li>AdGuard URL Tracking Protection</li>
-          <li>EasyPrivacy</li>
-        </ul>
-      </li>
-      <li>Malware Domains:
-        <ul>
-          <li>Online Malicious URL Blocklist</li>
-          <li>Spam404</li>
-        </ul>
-      </li>
-      <li>Annoyances:
-        <ul>
-          <li>Anti-Facebook</li>
-          <li>uBlock filters - Annoyances</li>
-        </ul>
-      </li>
+      <li>Privacy &gt; select all</li>
+      <li>Malware domains &gt; Spam404</li>
+      <li>Annoyances &gt; uBlock filters - Annoyances</li>
     </ul>
   </li>
 </ul>
-<p>For more information about uBlock usage see the <a href="https://github.com/gorhill/uBlock/wiki">Wiki</a> on Github.</p>
-<h2 id="doh-dns-over-https">DoH (DNS over HTTPS)</h2>
-<p>Go to <code class="language-plaintext highlighter-rouge">Edit -&gt; Settings -&gt; General -&gt; Network Settings</code>, click on <code class="language-plaintext highlighter-rouge">Settings</code>, select <code class="language-plaintext highlighter-rouge">Enable DNS over HTTPS</code>, in <code class="language-plaintext highlighter-rouge">Use Provider</code> window, select <code class="language-plaintext highlighter-rouge">Custom</code> and insert your DoH provider.</p>
-<p>You can find some good DNS providers at: <a href="https://privacyguides.org/providers/dns/">privacyguides.org/providers/dns</a></p>
-<p>For more information about DoH see: <a href="https://privacyguides.org/providers/dns/#dns-definitions">Privacy Guides - DNS definitions</a></p>
-<h2 id="multiple-profiles">Multiple profiles</h2>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/">HTTPS Everywhere</a></p>
+<ul>
+  <li>
+    <p>Open the plugin settings:</p>
+    <p>Click the icon to the right of the search bar, enable <code class="language-plaintext highlighter-rouge">Encrypt All Sites Eligible is OFF</code></p>
+  </li>
+  <li>
+    <p>Alternatively in the latest versions of Firefox you can use the “HTTPS-only mode”:</p>
+    <p>To enable this feature go to <code class="language-plaintext highlighter-rouge">Edit &gt; Preferences &gt; Privacy & Security &gt; HTTPS-Only Mode</code> then select <code class="language-plaintext highlighter-rouge">Enable HTTPS-Only Mode in all windows</code></p>
+  </li>
+</ul>
+<h3 id="doh-dns-over-https">DoH (DNS over HTTPS)</h3>
+<p>Go to <code class="language-plaintext highlighter-rouge">Edit &gt; Preferences &gt; General &gt; Network Settings</code>, click on <code class="language-plaintext highlighter-rouge">Settings</code>, select <code class="language-plaintext highlighter-rouge">Enable DNS over HTTPS</code></p>
+<p>Go to <code class="language-plaintext highlighter-rouge">Use Provider</code>, select <code class="language-plaintext highlighter-rouge">Custom</code>, insert your DoH provider</p>
+<p>You can find some good DNS providers at: <a href="https://www.privacytools.io/providers/dns/">privacytools.io/dns</a></p>
+<p>If you use a VPN that has its own DNS servers it is better to use those.</p>
+<h3 id="multiple-profiles">Multiple profiles</h3>
 <p>A good practice is to use multiple profiles for different purposes, e.g. (work, streaming, personal, finance), read <a href="https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles?redirectslug=profile-manager-create-and-remove-firefox-profiles&amp;redirectlocale=en-US">here</a> how to manage profiles in Firefox.</p>
-<h2 id="browser-fingerprinting">Browser fingerprinting</h2>
+<h3 id="browser-fingerprinting">Browser fingerprinting</h3>
 <p>When you visit a web page, your browser voluntarily sends information about its configuration, such as available fonts, browser type, and add-ons. If this combination of information is unique, it may be possible to identify and track you without using cookies, you can test your browser to see how unique it is.</p>
 <p>These are some sites where you can perform these tests:</p>
 <p><a href="https://coveryourtracks.eff.org/">https://coveryourtracks.eff.org/</a></p>
 <p><a href="https://www.amiunique.org/">https://www.amiunique.org/</a></p>
-<p><a href="https://browserleaks.com/">https://browserleaks.com/</a></p>
-<p>More information: <a href="static/browser-uniqueness.pdf">How Unique Is Your Web Browser? Peter Eckersley, EFF.</a></p>
-<h2 id="head">Head</h2>
+<p><a href="https://www.amiunique.org/">https://browserleaks.com/</a></p>
+<p>More information: <a href="https://privacytools.io/browsers/#fingerprint">https://privacytools.io/browsers/#fingerprint</a></p>
+<h3 id="head">Head</h3>
 <p>As always, use <strong>your head</strong> to avoid intrusions, browser security depends largely on how you behave online.</p>
 <hr />
+<p>by Brainfuck</p>
 <p>Credits:</p>
 <ul>
   <li>
@@ -392,10 +348,12 @@
     <p><a href="https://ublockorigin.com/">uBlock Origin</a></p>
   </li>
   <li>
-    <p><a href="https://privacyguides.org/browsers/#about_config">Firefox: Privacy Related “about:config” Tweaks</a></p>
+    <p><a href="https://www.eff.org/https-everywhere">HTTPS Everywhere</a></p>
+  </li>
+  <li>
+    <p><a href="https://privacytools.io/browsers/#browser">privacytools.io/browsers</a></p>
   </li>
 </ul>
-<hr />
 </article>
       </section>
     </div>
@@ -410,5 +368,5 @@
 </footer>
   <!-- Google Analytics
   -->
-<center><font size="2">This is the free demo result. For a full version of this website, please go to  <a href="https://www6.waybackmachinedownloader.com/website-downloader-online/scrape-all-files/">Website Downloader</a></font></center></body>
+</body>
 </html>

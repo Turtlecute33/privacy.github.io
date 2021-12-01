@@ -87,120 +87,38 @@
 							https://t.me/androidprivacyITA
 					</figure>
 					</blackquote>
+
+					<h2>Tabella dei contenuti</h2>
+					<ul>
+						<li>
+						<li>
+						<li>
+						<li>
+						<li>
+					</ul>
+
+					<p><code class="language-plaintext highlighter-rouge">~/.mozilla/firefox/xxxxxxxx.default</code></p>
+
+						<hr />
+						
+						<hr />
+				</article>
+			</section>
 		</div>
 	</div>
-
-	<p>At the time of writing Mozilla Firefox is at version 92.0.1, remember to check the settings at each update.</p>
-	<p><br /></p>
-	<h2 id="backup-firefox-profile">Backup Firefox profile</h2>
-	<p>Before changing the configuration, you should make a backup of the default profile, or create a new profile with the new settings.</p>
-	<p>To back up your profile, first close Firefox if it is open and then copy the default profile folder to another location, for example on Linux the profile folder is:</p>
-	<p><code class="language-plaintext highlighter-rouge">~/.mozilla/firefox/xxxxxxxx.default</code></p>
-	<p>when “xxxxxxxx” is the ID of your profile.</p>
-	<p>See: <a href="https://support.mozilla.org/en-US/kb/back-and-restore-information-firefox-profiles">Back up and restore information in Firefox profiles</a></p>
-	<p>If you want to create new profile see: <a href="https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles?redirectslug=profile-manager-create-and-remove-firefox-profiles&amp;redirectlocale=en-US">Create,
-			remove or switch Firefox profiles</a> (also, see <a href="#multiple-profiles">Multiple profiles</a> downward).</p>
-	<h2 id="firefox-preferences">Firefox Preferences</h2>
-	<p><strong>Download folder location</strong></p>
-	<ul>
-		<li>
-			<p>Click on <code class="language-plaintext highlighter-rouge">Edit -&gt; Settings</code></p>
-		</li>
-		<li>
-			<p>Go to <code class="language-plaintext highlighter-rouge">General -&gt; Files and Applications</code>, select <code class="language-plaintext highlighter-rouge">Always ask you where to save files</code></p>
-		</li>
-	</ul>
-	<p><strong>Search Engine preferences</strong></p>
-	<ul>
-		<li>
-			<p>Go to <code class="language-plaintext highlighter-rouge">Search -&gt; Default Search Engine</code>, select <code class="language-plaintext highlighter-rouge">DuckDuckGo</code>, then to <code
-					class="language-plaintext highlighter-rouge">Search -&gt; Search Shortcuts</code>, select <code class="language-plaintext highlighter-rouge">DuckDuckGo</code></p>
-		</li>
-		<li>
-			<p>Remove all other search engines</p>
-		</li>
-	</ul>
-	<h2 id="aboutconfig">about:config</h2>
-	<p>On the search bar insert: <code class="language-plaintext highlighter-rouge">about:config</code>, sets the values for the parameters as follow:</p>
-	<p><code class="language-plaintext highlighter-rouge">option</code> = <code class="language-plaintext highlighter-rouge">value</code></p>
-	<p><strong>StartUp Settings</strong></p>
-	<ul>
-		<li>
-			<p>Disable about:config warning:</p>
-			<p><code class="language-plaintext highlighter-rouge">browser.aboutConfig.showWarning</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-		</li>
-		<li>
-			<p>Disable activity and telemetry on new tab pages:</p>
-			<p><code class="language-plaintext highlighter-rouge">browser.newtabpage.enabled</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-			<p><code class="language-plaintext highlighter-rouge">browser.newtab.preload</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-			<p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.feeds.telemetry</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-			<p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.telemetry</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-			<p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.feeds.snippets</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-			<p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.feeds.section.topstories</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-			<p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.section.highlights.includePocket</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-			<p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.showSponsored</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-			<p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.feeds.discoverystreamfeed</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-			<p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.showSponsoredTopSites</code> = <code class="language-plaintext highlighter-rouge">false</code></p>
-			<p><code class="language-plaintext highlighter-rouge">browser.newtabpage.activity-stream.default.sites</code> = <code class="language-plaintext highlighter-rouge">""</code></p>
-		</li>
-	</ul>
-	<p><strong>Geolocation</strong></p>
-	<ul>
-		<li>
-			<p>Use Mozilla geolocation service instead of Google if permission is granted:</p>
-			<p><code class="language-plaintext highlighter-rouge">geo.provider.network.url</code> = <code class="language-plaintext highlighter-rouge">https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%</code></p>
-		</li>
-		<p>For more information about uBlock usage see the <a href="https://github.com/gorhill/uBlock/wiki">Wiki</a> on Github.</p>
-		<h2 id="doh-dns-over-https">DoH (DNS over HTTPS)</h2>
-		<p>Go to <code class="language-plaintext highlighter-rouge">Edit -&gt; Settings -&gt; General -&gt; Network Settings</code>, click on <code class="language-plaintext highlighter-rouge">Settings</code>, select <code
-				class="language-plaintext highlighter-rouge">Enable DNS over HTTPS</code>, in <code class="language-plaintext highlighter-rouge">Use Provider</code> window, select <code class="language-plaintext highlighter-rouge">Custom</code> and
-			insert your DoH provider.</p>
-		<p>You can find some good DNS providers at: <a href="https://privacyguides.org/providers/dns/">privacyguides.org/providers/dns</a></p>
-		<p>For more information about DoH see: <a href="https://privacyguides.org/providers/dns/#dns-definitions">Privacy Guides - DNS definitions</a></p>
-		<h2 id="multiple-profiles">Multiple profiles</h2>
-		<p>A good practice is to use multiple profiles for different purposes, e.g. (work, streaming, personal, finance), read <a
-				href="https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles?redirectslug=profile-manager-create-and-remove-firefox-profiles&amp;redirectlocale=en-US">here</a> how to manage profiles in Firefox.</p>
-		<h2 id="browser-fingerprinting">Browser fingerprinting</h2>
-		<p>When you visit a web page, your browser voluntarily sends information about its configuration, such as available fonts, browser type, and add-ons. If this combination of information is unique, it may be possible to identify and track
-			you without using cookies, you can test your browser to see how unique it is.</p>
-		<p>These are some sites where you can perform these tests:</p>
-		<p><a href="https://coveryourtracks.eff.org/">https://coveryourtracks.eff.org/</a></p>
-		<p><a href="https://www.amiunique.org/">https://www.amiunique.org/</a></p>
-		<p><a href="https://browserleaks.com/">https://browserleaks.com/</a></p>
-		<p>More information: <a href="static/browser-uniqueness.pdf">How Unique Is Your Web Browser? Peter Eckersley, EFF.</a></p>
-		<h2 id="head">Head</h2>
-		<p>As always, use <strong>your head</strong> to avoid intrusions, browser security depends largely on how you behave online.</p>
-		<hr />
-		<p>Credits:</p>
-		<ul>
-			<li>
-				<p><a href="https://github.com/arkenfox/user.js">arkenfox user.js</a></p>
-			</li>
-			<li>
-				<p><a href="https://ublockorigin.com/">uBlock Origin</a></p>
-			</li>
-			<li>
-				<p><a href="https://privacyguides.org/browsers/#about_config">Firefox: Privacy Related “about:config” Tweaks</a></p>
-			</li>
-		</ul>
-		<hr />
-		</article>
-		</section>
-		</div>
-		</div>
-		<footer>
-			<a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
-				<span>
-					<b>Turtlecute33</b>
-				</span>
-				<span>© 2021</span>
-			</a>
-		</footer>
-		<!-- Google Analytics
+	<footer>
+		<a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+			<span>
+				<b>Turtlecute33</b>
+			</span>
+			<span>© 2021</span>
+		</a>
+	</footer>
+	<!-- Google Analytics
   -->
-		<center>
-			<font size="2">This is the free demo result. For a full version of this website, please go to <a href="https://www6.waybackmachinedownloader.com/website-downloader-online/scrape-all-files/">Website Downloader</a></font>
-		</center>
+	<center>
+		<font size="2">This is the free demo result. For a full version of this website, please go to <a href="https://www6.waybackmachinedownloader.com/website-downloader-online/scrape-all-files/">Website Downloader</a></font>
+	</center>
 </body>
 
 </html>

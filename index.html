@@ -16,8 +16,6 @@
 	<meta property="og:locale" content="it_IT" />
 	<meta name="description" content="Hacking - Cyber Security and Privacy" />
 	<meta property="og:description" content="Hacking - Cyber Security and Privacy" />
-	<link rel="canonical" href="https://brainfucksec.github.io/hardening-firefox-sep-2021-update" />
-	<meta property="og:url" content="https://brainfucksec.github.io/hardening-firefox-sep-2021-update" />
 	<meta property="og:site_name" content="Turtlecute33" />
 	<meta property="og:type" content="article" />
 	<meta property="article:published_time" content="2021-09-29T00:00:00+00:00" />
@@ -80,13 +78,13 @@
 					</div>
 					<p>Questa vuole essere una guida completa per ottenere un telefono android completamente de-googled e con la massima privacy possibile, pur mantenendo la minima usabilità e comodità del dispositivo.</p>
 					<figure>
-						<blackquote>
+						<blackquote style="color:grey">
 							La guida è aperta a miglioramenti e consigli,descriverò la configurazione che trovo con il miglior rapporto usabilità/privacy, nel tempo ampierò le varie sezioni introducendo anche le varie alternative per chi magari non si trova bene
 							con una determinata app o servizio,
 							Se volete darmi consigli, contribuire alla guida o effettuare traduzioni, potete scrivermi @turtlecute su telegram o entrare nel gruppo telegram che ho creato riguardante la guida:
-							https://t.me/androidprivacyITA
+							<a href="https://t.me/androidprivacyITA">https://t.me/androidprivacyITA</a>
+						</blackquote>
 					</figure>
-					</blackquote>
 
 					<h2>Tabella dei contenuti</h2>
 					<ul>
@@ -96,11 +94,76 @@
 						<li>
 						<li>
 					</ul>
+					<br />
+					<h2>Sistema operativo</h2>
+					<p>Esistono vari sistemi operativi android privacy oriented (GeapheneOS, CalixOS, etc) in questa guida però tratteremo
+						l’approccio usando come base la LineageOS 12(con microG) ma è comunque compatibile con ogni altro sistema operativo AOSP.</p>
+					<h3>!WARNING!</h3>
+					<p>sconsiglio questa guida se usate GrapheneOS in quanto loro sconsigliano il rooting del dispositivo, cosa che noi effettueremo
+						(un telefono senza root è più sicuro in quanto le app con i permessi di root possono avere completo accesso al dispositivo,
+						qualsiasi app con accesso root in questa guida è completamente opensource e verificata, quindi possiamo ritenerle sicure,
+						è un compromesso per avere poi maggior liberta di bloccare tracker nascosti e falle di privacy nel sistema).</p>
+					<br />
+					<p<>Per semplificare i passi per l’installazione della Lineage faccio un brevissimo riassunto:</p>
+						<ol>
+							<li>Per semplificare i passi per l’installazione della Lineage faccio un brevissimo riassunto:</li>
+							<li>Sbloccare il bootloader</li>
+							<li>Flashare una recovery</li>
+							<li>Flashare <a href="https://lineage.microg.org/">Lineage OS </a>versione microG</li>
+						</ol>
+						<figure>
+							<blackquote style="color:grey"><code class="language-plaintext highlighter">
+									Attenzione, la versione base senza app di google è preferibile ma utilizzando microG senza aggiungere nessun account
+									google potremo almeno utilizzare i servizi base di android senza andare in contro a crash e malfunzioni di app dipendenti
+									dai google play services e ricevere anche le notifiche di tutte le app in quanto alcune senza play services danno problemi
+									nelle notifiche
+							</blackquote>
+						</figure>
+						<p>
+							A questo punto ci troveremo con un dispositivo con un sistema operativo fresco e appena installato.
+						</p>
+						<h2>Modifica e setup del sistema</h2>
+						<p>
+							Per avere un dispositivo privacy oriented cominceremo con il modificare i vari settings del sistema operativo,
+							qui elenco i principali settings e accorgimenti anche se possono cambiare da dispositivo a dispositivo:
+						</p>
+						<ul>
+							<li>Disabilitare bluetooth e localizzazione ogni volta che non li utilizzate</li>
+							<li>Attivare la privacy nel blocco schermo e un metodo di protezione del dispotivo
+								(pin e notifiche nascoste con telefono bloccato)</li>
+							<li>Disabilitate tutti i dati telemetrici</li>
+							<li>Abilitate se disattivata la criptazione del dispositivo</li>
+							<li>Disabilitate i backup</li>
+							<li>Rifiutate ogni volta, se possibile, la condivisione di dati di telemetria e crash in tutte le app che installate</li>
+							<li>Ricordatevi, se lo usate, di disattivare il debug usb (disabilitato di default)
+								in quanto se perdete il telefono espone a grossi rischi in fatto di sicurezza</li>
+						</ul>
+						<p>Gestiremo invece dopo i permessi delle applicazioni.</p>
+						<h2>Magisk,Riru e moduli</h2>
+						<p>Procediamo con l’installazione di magisk, alcune persone preferiscono non rootare in quanto un dispositivo rootato è meno sicuro,
+							noi in questa guida useremo solo applicazioni open-source di cui siamo sicuri che non possano danneggiarci con i permessi
+							di amministratore.
+						</p>
+						<p>
+							  Installato magisk (da flashare in recovery) e magisk manager (apk per gestire il root) installiamo anche i seguenti moduli:
+						</p>
+						<ul>
 
-					<p><code class="language-plaintext highlighter-rouge">~/.mozilla/firefox/xxxxxxxx.default</code></p>
+						</ul>
+
+
+
+
+
+
+
+
+
+
+						<p><code class="language-plaintext highlighter-rouge">~/.mozilla/firefox/xxxxxxxx.default</code></p>
 
 						<hr />
-						
+
 						<hr />
 				</article>
 			</section>

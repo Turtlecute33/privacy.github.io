@@ -230,7 +230,7 @@
 						<p>
 							Per ulteriori applicazioni, browser e servizi privacy friendly consiglio di dare un occhio a <a href="https://www.privacytools.io/">privacytools</a> e <a href="https://privacyguides.org/providers/">privacyguides</a>.
 						</p>
-						<h2>Email</h2>
+						<h2>Client e provider email</h2>
 						<p>
 							Il discorso su quale sia il miglior client e provider email e' lungo e complesso, la migliore opzione sarebbe hostarsi da soli un email ma non e' sicuramente
 							facile.
@@ -244,10 +244,37 @@
 							<br />
 							<br />
 							Un opzione a mio parere molto valida e'quella di usare come client (quindi come app su cui riceviamo le mail) <a href="https://f-droid.org/en/packages/com.fsck.k9/">
-								K-9 Email </a> 
-
-
+								K-9 Email </a> e come provider (quindi come servizio email da collegare a k9) o un servizio a pagamento come <a href="https://email.faircode.eu/">fairemail</a> oppure possiamo provare
+							a contattare/farci invitare da qualche gruppo />collettivo privacy friendly o anarchico come <a href="https://riseup.net/">Riseup</a> o <a href="https://www.autistici.org/">autistici</a>,
+							quest'ultimo pero'in passato ha subito vari hack, quindi consiglio magari altre alternative.
+							<br />
+							<br />
+							Molto interessante all'interno delle impostazioni di K9 e' l'opzione di auto-criptazione delle email:
+							importando una chiave PGP da openkeychain (app sopra trattata) e'possibile criptare automaticamente le email verso le persone che a loro volta hanno importato una chiave PGP.
+							dopo una prima email non criptata k9 auto importa la public key dell'altra persona permettendoci cosi di scambiare email criptate senza doversi passare le chiavi.
 						</p>
+						<p><code class="language-plaintext highlighter-rouge">A questo punto della guida dovreste aver già installato tutte le vostre
+								applicazioni personali e quelle da me indicate e/o consigliate, ora possiamo andare ad agire sulla pulizia
+								dei servizi di tracking delle app sul nostro dispositivo.</code></p>
+						<h2>Gestione dei permessi delle app</h2>
+						<p>Come primo passo ci rechiamo nelle impostazioni del nostro telefono e andiamo nella sezione applicazioni → avanzate → gestione permessi e qui rimuoviamo ogni permesso superfluo delle applicazioni (con superfluo intendo che per esempio,
+							un app come whatsapp, ha bisogno dei nostri contatti se vogliamo trovarli, quindi per il corretto funzionamento dell’applicazione conviene lasciargli questo permesso, ma possiamo tranquillamente disabilitare l’accesso ai messaggi in
+							quanto verrà usato solo la prima volta quando faremo il login per velocizzare il primo accesso, dopo di che se lasciato attivo concede a whatsapp la possibilità di spiare tutti i nostri SMS).
+						<br />
+						<br />
+						Prestiamo particolare attenzione ai permessi di geolocalizzazione, fotocamera e microfono.
+						<br />
+						<br />
+						Quando un app ci chiede un permesso che non è utile o siete consapevoli di usare saltuariamente questo servizio concedete il permesso ‘solo per questa volta' in modo che non abbia continuo accesso per esempio alla localizzazione.
+						<br />
+						<br />
+						Dopo aver modificato tutti i permessi andiamo anche a disabilitare l’accesso ad internet a tutte le applicazioni che non necessitano della rete (per esempio i vari file manager, calcolatrici, agende, note, tastiere, ecc), possiamo farlo
+						comodamente andando nelle informazioni su un applicazioni → dati e rete → disabilitiamo ‘accesso alla rete’.
+						<br />
+						<br />
+						In caso vogliate essere ulteriormente certi del blocco di internet a queste app potete usare servizi come AFWALL per bloccarle dietro un firewall, non sottovalutate l’accesso ad internet delle app, molte, nonostante non abbia bisogno di
+						quest’ultimo per il funzionamento, lo usano di continuo per condividere nostri dati.
+					</p>
 
 
 
@@ -258,7 +285,7 @@
 
 
 
-						<p><code class="language-plaintext highlighter-rouge">~/.mozilla/firefox/xxxxxxxx.default</code></p>
+						<p><code class="language-plaintext highlighter-rouge">A questo punto \.</code></p>
 
 						<hr />
 

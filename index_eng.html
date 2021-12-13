@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+	<title>Privacy android</title>
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.svg">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+	<title> Privacy android </title>
+	<meta name="generator" content="Jekyll v3.9.0" />
+	<meta property="og:title" content="Privacy android " />
+	<meta name="author" content="Turtlecute" />
+	<meta property="og:locale" content="it_IT" />
+	<meta name="description" content="yber Security and Privacy" />
+	<meta property="og:description" content="Cyber Security and Privacy" />
+	<meta property="og:site_name" content="Turtlecute33" />
+	<meta property="og:type" content="article" />
+	<meta property="article:published_time" content="2021-09-29T00:00:00+00:00" />
+	<meta name="twitter:card" content="summary" />
+	<meta property="twitter:title" content="Privacy android" />
+	<script type="application/ld+json">
+		{
+			"author": {
+				"@type": "Person",
+				"name": "Turtlecute33"
+			},
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": "https://github.com/Turtlecute33/privacy.github.io"
+			},
+			"description": "Cyber Security and Privacy",
+			"url": "https://github.com/Turtlecute33/privacy.github.io",
+			"@type": "BlogPosting",
+			"headline": "Privacy android ",
+			"dateModified": "2021-09-29T00:00:00+00:00",
+			"datePublished": "2021-09-29T00:00:00+00:00",
+			"@context": "https://schema.org"
+		}
+	</script>
+	<!-- End Jekyll SEO tag -->
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<div>
+				<div class="header-links">
+					<a href="index.html">
+						<h2 class="header-link">Android</h2></a>&nbsp
+					<a href="supporto.html">
+						<h2 class="header-link">Support</h2>
+					</a>
+				</div>
+			</div>
+		</header>
+		<div class="container">
+			<section id="main_content">
+				<article>
+					<center>
+						<h2> Guide to De-Google and privacy on android</h2>
+						<time datetime="2021-09-29T00:00:00+00:00" class="by-line">Last update 14/12/2021 </time>
+						<p><br /></p>
+					</center>
+					<center>
+						<img style="width:95%; height:95%;" src="assets/img/1.png">
+					</center>
+					<p>This is meant to be a comprehensive guide to getting a fully de-googled android phone with as much privacy as possible, while maintaining the minimum usability and
+						convenience of the device.</p>
+					<figure>
+						<blackquote style="color:grey">
+							The guide is open to improvements and suggestions, I will describe the configuration that I find with the best usability/privacy ratio, over time I will expand the various sections introducing
+														also the various alternatives for those who may not be comfortable
+														with a certain app or service,
+														If you want to give me advice, contribute to the guide or make translations, you can write me @turtlecute on telegram or join the telegram group that I created regarding the guide:
+							<a href="https://t.me/androidprivacyENG">https://t.me/androidprivacyENG</a>
+						</blackquote>
+					</figure>
+
+					<h2>Table of contenent</h2>
+					<ul>
+						<li><a href="#os">Operating System</a></li>
+						<li><a href="#set">System setup</a></li>
+						<li><a href="#magisk">Magisk,Riru and modules</a></li>
+						<li><a href="#store">Store</a></li>
+						<li><a href="#app">Must have apps</a></li>
+						<li><a href="#permessi">Permissions</a></li>
+						<li><a href="#cloud">Cloud and Vpn</a></li>
+						<li><a href="#conc">Conclusions</a></li>
+						<li><a href="supporto.html">Donations</a></li>
+					</ul>
+					<br />
+					<h2 id="os">Operating system</h2>
+					<p>There are various android privacy oriented operating systems (GeapheneOS, CalixOS, etc) in this guide however we will treat
+						the approach using as base the LineageOS 12(with microG) but is still compatible with any other AOSP operating system.</p>
+					<h3>!WARNING!</h3>
+					<p>I don't recommend this guide if you use GrapheneOS as they don't recommend rooting the device, which we will do
+						(a non-rooted phone is safer because apps with root permissions can have full access to the device,
+						any rooted apps in this guide are completely opensource and verified, so we can consider them safe,
+						it's a compromise to have more freedom to block hidden trackers and privacy holes in the system).</p>
+					<br />
+					<p<>To simplify the steps for installing Lineage I'll make a very brief summary:</p>
+						<ol>
+							<li>Unlock bootloader</li>
+							<li>Flash one recovery</li>
+							<li>Flash <a href="https://lineage.microg.org/">Lineage OS </a>microG version</li>
+						</ol>
+						<figure>
+							<blackquote style="color:grey"><code class="language-plaintext highlighter">
+								Warning, the basic version without google app is preferable but using microG without adding any account
+								google account we can at least use the basic services of android without going against crashes and malfunctions of app dependent
+								from google play services and also receive notifications of all apps as some without play services give problems
+								in notifications
+							</blackquote>
+						</figure>
+						<p>
+							At this point we will find ourselves with a device with a freshly installed operating system.
+						</p>
+						<h2 id="set">Editing and setup of operating system</h2>
+						<p>
+							To have a privacy oriented device we will start by modifying the various settings of the operating system,
+							here I list the main settings and tricks even if they can change from device to device:
+						</p>
+						<ul>
+							<li>Disable bluetooth and localization whenever you don't use them</li>
+							<li>Enable privacy in the lock screen and a method of device protection
+								(hidden pins and notifications with locked phone)</li>
+							<li>Disable all telemetry data</li>
+							<li>Enable device encryption if disabled</li>
+							<li>Disable backups</li>
+							<li>Refuse, whenever possible, to share telemetry and crash data in any app you install</li>
+							<li>Remember, if you use it, to disable the usb debugging (disabled by default)
+								because if you lose the phone it exposes you to great risks in the security field</li>
+						</ul>
+						<p>We'll manage application permissions later instead.</p>
+						<h2 id="magisk">Magisk,Riru and modules</h2>
+						<p>We proceed with the installation of magisk, some people prefer not to root as a rooted device is less secure,
+							we in this guide will only use open-source applications that we are sure can not harm us with permissions
+							administrator permissions.</p>
+						<p>
+							Installed magisk (to be flashed in recovery) and magisk manager (apk to manage the root) we also install the following modules:
+						</p>
+						<ul>
+							<li>Magisk hide (will help us to hide the root from apps such as banking apps that often have blocks inserted</li>
+							<li>RIRU (ART and DALVIK memory modifier)</li>
+							<li>RIRU LsPosed (implementation of xposed)</li>
+							<li>Systemless host (you enable it from magisk settings and it will allow us to block trackers,
+								advertising and loggers in combination with other apps that we will install later)</li>
+						</ul>
+						<p>After rebooting the device we open LsPosed and install the following modules:</p>
+						<ul>
+							<li>Android faker (application that allows us to change automatically or with a single click all the unique ids
+								I recommend every so often (once a week/month) to open the app and click on random all to apply the new IDs.
+								click on random all to apply the new IDs because occasionally does not apply them at startup.</li>
+							<p>(some apps with id change may make you log out automatically (spotify and banking apps)</p>
+							<li>XprivacyLUA (an app that will block the hidden permissions that apps take automatically and instead of providing the data
+								instead of the data requested by them, it will provide false and random information to protect our security and privacy.</li>
+						</ul>
+						<h2 id="store">Store for downloading apps</h2>
+						<p>Being now separated from the google world we will have to find other stores to download apps from, the main alternatives are:</p>
+						<ul>
+							<li> <a href="https://www.f-droid.org/">F-Droid </a> (alternative FOSS/Open Source app store) possibly we'll install apps from here but don't expect to find instagram or facebook
+								to find instagram or facebook, continent only opensource apps so at most you'll find their FOSS alternatives.</li>
+							<li><a href="https://www.f-droid.org/packages/com.looker.droidify/">Droid-ify</a>(opensource/fork alternative to fdroid with better graphics and a few more features,
+								in my opinion the best alternative if you are looking for a UI a little more elegant) </li>
+							<li><a href="https://files.auroraoss.com/AuroraStore/Stable/">Aurora Store</a> (it allows you to use the old google store but always through fictitious and different accounts
+								each time automatically generated by him,
+								I recommend that you use the guest mode / anonymous or it will be useless)</li>
+						</ul>
+						<h2 id="app">Fundamental applications</h2>
+						<p>Now that we have the stores installed let's go download some FUNDAMENTAL and practically mandatory apps:</p>
+						<ul>
+							<li><a href="https://adaway.org/"> AdAway</a> (it removes 90% of advertisements, trackers and loggers from browser navigation and directly from applications by acting on the host file,
+								for a correct working you must have enabled the systemless host (section magisk modules is above))</li>
+							<li><a href="https://forum.xda-developers.com/t/free-app-4-0-root-airfrozen-app-freeze-package-disabler-no-root-for-samsung.3458361/">Airfrozen</a> or any app for uninstalling or disabling
+								system apps (thanks to root and
+								magisk we can remove the system apps that we consider unnecessary to lighten
+								the system and / or share less data, I attach screen of those blocked by me, you can also block others or less depending on your use)</li>
+							<p style="color:grey">Beware, block aurora services only if you enable root installation in aurora store settings.</P>
+							<center><img style="width:95%; height:95%;" src="assets/img/screen.png"></center>
+							<li><a href="https://www.f-droid.org/packages/org.dslul.openboard.inputmethod.latin/">OpenBoard</a> (faccio un piccolo discorso su questa app, è una tastiera android opensource esattamente uguale alla Gboard,
+								so che molti sono abituati a google board o swiftkey ma per l’amor del cielo evitatele, ho provato a bloccare vari processi e l’accesso ad internet alla google board ma analizzando
+								i dati scambiati con la mia rete ho notato che riusciva comunque a comunicare con i server google, per favore usate openboard o altre tastiere opensource offline)</li>
+							<li><a href="https://gitlab.com/AuroraOSS/AppWarden/-/releases">Warden</a> (questa app è una parte fondamentale della guida e blocca tutti i tracker e loggers delle app sul dispositivo,
+								ne tratteremo l’uso a breve)</li>
+							<li><a href="https://www.bromite.org/">Bromite</a> (A mio parere il miglior broswer android, purtroppo firefox e tutti i suoi fork non supportano su android l'isolazione delle pagine e dei cookie,
+								questo crea un enorme problema di privacy, bromite invece e' basato su chromium e anche se non supporta le estensioni, ha gia internamente abilitabile un adblock che supporta liste personalizzate e
+								possiede anche vari tweak anti fingerprint)</li>
+							<li><a href="https://www.myandroidtools.com/">My android tools</a> (ci permetterà di bloccare servizi, permessi e attività delle singole applicazioni installate nel nostro dispotivo,
+								guida all' utilizzo più avanti nella guida)</li>
+							<br />
+							<p style="color:grey">A questo punto possiamo procedere al download delle nostre applicazioni personali, sicuramente ci sono app di cui faremo fatica a fare a meno: social,
+								app bancarie, ecc… vi lascio qua di seguito una lista delle alternative o quelle a mio parere open source più utili:</p>
+							<br />
+							<li><a href="https://www.f-droid.org/packages/com.beemdevelopment.aegis/">Aegis</a>(alternativa opensource ed offline a authy/google authenticator)</li>
+							<li><a href="https://f-droid.org/packages/de.danoeh.antennapod/">Antenna pod</a>(lettore di podcast totalmente opensource, Usa come fonte i principali lettori podcast esistenti)</li>
+							<li><a href="https://github.com/bitwarden/mobile/releases">Bitwarden</a>(miglior password manager, estremamente sicuro ed open source, consentente anche il self-hosting)</li>
+							<li><a href="https://www.f-droid.org/packages/com.pitchedapps.frost/">Frost</a>(per quanto disprezzi e sconsigli l’utilizzo di facebook se proprio non riuscite a farne a meno consiglio di utilizzare frost,
+								un client opensource per facebook)</li>
+							<li><a href="https://f-droid.org/it/packages/cf.theonewiththebraid.guerrilla_mail/">Guerrilla mail</a>(client open source per guerrilla mail ovvero una temp mail per gli spam)</li>
+							<li><a href="https://www.f-droid.org/packages/ml.docilealligator.infinityforreddit/">Infinity</a>(client di ottima qualità open source di reddit, a mio parere meglio della app originale!!)</li>
+							<li><a href="https://www.f-droid.org/packages/pan.alexander.tordnscrypt.stable/">InviziblePro</a>(app All-In-One per utilizzare tor, DnsCrypt e i2p sul vostro dispotivo, per una sicurezza o qualità maggiore nell’utilizzo di tor
+								consiglio orbot ma questa rimane molto comoda ed efficiente nonché più versatile</li>
+							<li><a href="https://www.f-droid.org/packages/org.proninyaroslav.libretorrent/">Libre torrent</a>(semplice,comodo e veloce open source client torrent per android)</li>
+							<li><a href="https://molly.im/">Molly</a>(una versione hardened e ripulita dal codice google di signal, portebbe essere una buona idea registrarsi con un numero di una sim comprata senza documenti se legale nel vostro stato)</li>
+							<li><a href="https://www.f-droid.org/packages/org.schabi.newpipe/">Newpipe</a>(client open source di peertube, tutti i video di YouTube ma senza google!)</li>
+							<li><a href="https://f-droid.org/en/packages/com.nextcloud.client/">Nextcloud</a>(Client per usare e syncare nextcloud, a mio parere il migliore softwere per farsi un server multimediale in casa)</li>
+							<li><a href="https://www.f-droid.org/packages/org.sufficientlysecure.keychain/">Open keychain</a>(app per gestire le nostre chiavi PGP o per integrarle nelle applicazioni di messaggistica / e-mail)</li>
+							<li><a href="https://www.f-droid.org/packages/io.simplelogin.android.fdroid/">Simplelogin</a>(una sorta di proxy e-mail anti spam, crea delle e-mail esca con cui registrarvi ai siti che automaticamente girano Le e-mail ad altri
+								indirizzi da voi scelti, in questo modo non dovete dare la vostra e-mail a siti esterni, inoltre potete eliminare o sospendere le e-mail esca quando volete in modo da interrompere la ricezione delle e-mail sul vostro account
+								principale)</li>
+							<li><a href="https://www.f-droid.org/packages/org.telegram.messenger/">Telegram FOSS</a>(client open source per telegram che non si appoggia ai servizi google)</li>
+							<li><a href="https://www.torproject.org/download/#downloads-alpha">Tor Browser</a>(broswer tor ufficiale con libreria tor integrata, utile per navigare online senza rivelare l’indirizzo IP, non garantisce un anonimato al 100% come ogni
+								cosa ma è un ottimo scudo per la privacy, utile per navigare nei siti .onion)</li>
+							<li><a href="https://github.com/Treecord/Treecord">Treecord</a>(versione open source e con tracker bloccati del client discord per android)</li>
+							<li><a href="https://www.f-droid.org/packages/de.ph1b.audiobook/">Voice</a>(lettore offline e opensource di audiolibri)</li>
+							<li><a href="https://www.f-droid.org/packages/com.simplemobiletools.filemanager.pro/">Simple file manager</a>(File manager open source dall’ottima grafica e con permessi root opzionali)</li>
+						</ul>
+						<p>
+							Per ulteriori applicazioni, browser e servizi privacy friendly consiglio di dare un occhio a <a href="https://www.privacytools.io/">privacytools</a> e <a href="https://privacyguides.org/providers/">privacyguides</a>.
+						</p>
+						<h2 id="email">Client e provider email</h2>
+						<p>
+							Il discorso su quale sia il miglior client e provider email e' lungo e complesso, la migliore opzione sarebbe hostarsi da soli un email ma non e' sicuramente
+							facile.
+							<br />
+							<br />
+							In caso vogliamo un servizio rapido e comodo ma in cui dobbiamo riporre fiducia in un ente terzo consiglio <a href="https://github.com/ProtonMail/proton-mail-android/releases">Proton mail</a>,
+							da usare solo tramite Tor, oppure <a href="https://www.f-droid.org/packages/de.tutao.tutanota/">tutanota</a>, che sembra essere un azienda piu'
+							trasparente, ma dichiara di loggare gli indirizi IP degli utenti; possibilmente eviterei l'uso di entrambi questi provider in quanto promettono anonimato ma gia'in passato
+							non hanno rispettato questa clausola e potrebbero essere degli honeypot(<a href="https://it.wikipedia.org/wiki/Honeypot" )>?</a>) pero' entrambe auto-criptano i messaggi verso le email
+							dello stesso provider (tutanota con tutanota e proton con proton).
+							<br />
+							<br />
+							Un opzione a mio parere molto valida e'quella di usare come client (quindi come app su cui riceviamo le mail) <a href="https://f-droid.org/en/packages/com.fsck.k9/">
+								K-9 Email </a> e come provider (quindi come servizio email da collegare a k9) o un servizio a pagamento come <a href="https://email.faircode.eu/">fairemail</a> oppure possiamo provare
+							a contattare/farci invitare da qualche gruppo />collettivo privacy friendly o anarchico come <a href="https://riseup.net/">Riseup</a> o <a href="https://www.autistici.org/">autistici</a>,
+							quest'ultimo pero'in passato ha subito vari hack, quindi consiglio magari altre alternative.
+							<br />
+							<br />
+							Molto interessante all'interno delle impostazioni di K9 e' l'opzione di auto-criptazione delle email:
+							importando una chiave PGP da openkeychain (app sopra trattata) e'possibile criptare automaticamente le email verso le persone che a loro volta hanno importato una chiave PGP.
+							dopo una prima email non criptata k9 auto importa la public key dell'altra persona permettendoci cosi di scambiare email criptate senza doversi passare le chiavi.
+						</p>
+						<p><code class="language-plaintext highlighter-rouge">A questo punto della guida dovreste aver già installato tutte le vostre
+								applicazioni personali e quelle da me indicate e/o consigliate, ora possiamo andare ad agire sulla pulizia
+								dei servizi di tracking delle app sul nostro dispositivo.</code></p>
+						<h2 id="permessi">Gestione dei permessi delle app</h2>
+						<p>Come primo passo ci rechiamo nelle impostazioni del nostro telefono e andiamo nella sezione applicazioni → avanzate → gestione permessi e qui rimuoviamo ogni permesso superfluo delle applicazioni (con superfluo intendo che per esempio,
+							un app come whatsapp, ha bisogno dei nostri contatti se vogliamo trovarli, quindi per il corretto funzionamento dell’applicazione conviene lasciargli questo permesso, ma possiamo tranquillamente disabilitare l’accesso ai messaggi in
+							quanto verrà usato solo la prima volta quando faremo il login per velocizzare il primo accesso, dopo di che se lasciato attivo concede a whatsapp la possibilità di spiare tutti i nostri SMS).
+							<br />
+							<br />
+							Prestiamo particolare attenzione ai permessi di geolocalizzazione, fotocamera e microfono.
+							<br />
+							<br />
+							Quando un app ci chiede un permesso che non è utile o siete consapevoli di usare saltuariamente questo servizio concedete il permesso ‘solo per questa volta' in modo che non abbia continuo accesso per esempio alla localizzazione.
+							<br />
+							<br />
+							Dopo aver modificato tutti i permessi andiamo anche a disabilitare l’accesso ad internet a tutte le applicazioni che non necessitano della rete (per esempio i vari file manager, calcolatrici, agende, note, tastiere, ecc), possiamo farlo
+							comodamente andando nelle informazioni su un applicazioni → dati e rete → disabilitiamo ‘accesso alla rete’.
+							<br />
+							<br />
+							In caso vogliate essere ulteriormente certi del blocco di internet a queste app potete usare servizi come AFWALL per bloccarle dietro un firewall, non sottovalutate l’accesso ad internet delle app, molte, nonostante non abbia bisogno di
+							quest’ultimo per il funzionamento, lo usano di continuo per condividere nostri dati.
+						</p>
+						<h2>My Android Tools</h2>
+						<p>
+							Questa app ci permette di andare manualmente a bloccare tutti i vari servizi ed attività delle applicazioni, ‘rimuovendo' piccole parti delle app o bloccandone alcune funzionalità.
+							<br />
+							<br />
+							Prima di tutto andiamo nella sezione ‘service’ e tramite il menù in alto a destra clicchiamo su ‘search components in all apps' ed andiamo a cercare le seguenti parole:
+						<ul>
+							<li><b>AdService</b> e blocchiamo tutti i servizi che si chiamano precisamente cosi.</li>
+							<li><b>Analytics</b> e blocchiamo tutti i servizi che contengono questa parola <b>TRANNE</b> quelli dell’applicazione warden</li>
+							<li><b>Google</b> e blocchiamo tutti i servizi <b>TRANNE</b> quelli di MicroG</li>
+							<li><b>Billing</b> e blocchiamo tutti i servizi nelle app in cui non intendiamo fare acquisti</li>
+							<li><b>Crash / report / bug</b> e blocchiamo tutti i servizi che contengono queste parole</li>
+						</ul>
+						Dopo di che andiamo nella sezione broadcast reciver →action →boot completed e disattiviamo tutte le applicazioni che non vogliamo si avviino in automatico (attenzione, le app che disabilitiamo non riceveranno notifiche mentre saranno
+						chiuse, disabilitate quindi le app che non vi serve notare subito le notifiche e/o offline, lasciate attive le varie app di messaggistica ed email).
+						<br />
+						<br />
+						Per concludere andiamo nella sezione activity → menu in alto a destra → search in all components e cerchiamo:
+						<ul>
+							<li><b>Google</b> e disattiviamo tutti i servizi googleAPI tranne quelli di microG e aurora strore.</li>
+							<li><b>Facebook</b> e disabilitate tutte le app in cui non avete bisogno di fare il login tramite facebook</li>
+						</ul>
+						Occasionalmente guardate se installando nuove app ci sono nuovi servizi o attività da bloccare.
+						<br />
+						<br />
+						In caso un app crashi al boot private a riattivare alcuni dei servizi bloccati in modo da individuare cosa la fa crashare, se anche cosi non risolvete provate a re-installarla.
+						</p>
+						<h2>Warden</h2>
+						<p>
+							Questa app fatta dallo stesso creatore dell’Aurora store è eccezionale per bloccare tutti i tracker in modo veloce ed automatico, Warden scansiona tutte le app installate (abilitate dalle impostazioni lo scan anche delle app di sistema)
+							e blocca automaticamente tutti tracker trovati (li confronta offline con il database di exodus privacy, potete disabilitare l’accesso ad internet dell’app), occasionalmente come con my android tool conviene ri-fare il re-scan delle app
+							per bloccare i tracker delle app installate nel frattempo.
+							<br />
+							<br />
+							Per bloccare tutti tracker apriamo l’app, abilitiamo dai settings lo scan delle app di sistema, apriamo il menù laterale a sinistra e andiamo nella sezione <code class="language-plaintext highlighter-rouge">‘labs’</code>, dopo di ché
+							avviamo il servivizio <code class="language-plaintext highlighter-rouge">‘nuke it all’</code>; attendiamo qualche
+							minuto e tutti i tracker trovati nelle nostre app saranno bloccati.
+						</p>
+						<h2="cloud">Cloud e Vpn</h2>
+						<p>
+							Faccio una piccola sezione a parte per questi due sotto-argomenti:
+							La migliore soluzione cloud sarebbe il self hosting con nextcloud (a mio parere la miglior scelta ), in caso ciò non sia possibile la soluzione a mio parere piu semplice e veloce è <a href="http://mega.nz/">Mega.nz</a> (20gb gratis e
+							5gb di bandwith ed accetta
+							pagamento in bitcoin per i pro plans) se vogliamo invece una sicurezza aggiuntive possiamo usare un cloud con il supporto a WebDav come icedrive in combinazione con <a href="https://cryptomator.org/">Cryptomator</a> (programma che
+							cripta i file prima dell’upload in cloud).
+							<br />
+							<br />
+							Il discorso VPN invece è particolare, una vpn teoricamente cripta il nostro traffico e lo fa passare attraverso un suo nodo mettendosi tra noi e il nostro ISP andando cosi a darci privacy verso di esso ma obbligandoci a fidarci del
+							servizio vpn stesso.
+							<br />
+							Tutti le aziende in questo settore promettono privacy e politiche di no logging ma praticamente il 99% delle VPN più che darci privacy ce la fanno perdere, l’unica che mi sento davvero di consigliarvi è <a
+								href="https://mullvad.net/en/">Mullvad</a> (<a href="http://o54hon2e2vj6c7m3aqqu6uyece65by3vgoxxhlqlsvkmacw6a7m7kiad.onion/en/">onion link</a>),è ovviamente
+							obbligatorio pagarla in bitcoin per avere un privacy maggiore.
+						</p>
+						<h2id="conc">Conclusioni Finali</h2>
+						<p>
+							Seguendo questa guida avremo ridotto drasticamente la condivisione di dati personali, cio’ non garantisce in nessun modo l’anonimato ma solamente aumenta decisamente la privacy nell’utilizzo del dispositivo.
+							<br />
+							<br />
+							L’utilizzo di MicroG (fondamentale se volete ricevere le notifiche a schermo bloccate e volete usare molte app non open source quali quelle bancarie e vari social) lascia che comunque una piccola quantita’ di dati venga inviata a dei
+							server google ma se seguite correttamente cio’ che ho scritto sopra i dati inviati saranno davverno pochi e non piu’ riconducibili direttamente ad un vostro account.
+							<br />
+							se volete verificare quali app comunicano con internet e/o condividono vostri dati potete utilizzare applicazioni come <a href="https://github.com/emanuele-f/PCAPdroid">PCAPdroid</a> per analizzare il traffico dati creando una VPN
+							fittizia con cui filtrate il flusso di dati proveniente dal
+							vostro cellulare, un altra opzione e’ usare wireshark sul vostro pc mentre siete connessi con il cellulare al wifi.
+							<br />
+							<br />
+							altri ottimi posti per rimanere aggiornati in ambito privacy e degoogle sono vari subreddit:
+						<ul>
+							<b>
+								<li><a href="https://www.reddit.com/r/degoogle/">DEGOOGLE</a></li>
+								<li><a href="https://www.reddit.com/r/privacytools/">PRIVACYTOOLS</a></li>
+								<li><a href="https://www.reddit.com/r/privacy/">PRIVACY</a></li>
+							</b>
+						</ul>
+						</p>
+						<h2>Supporto</h2>
+						<p>
+							Se volete supportare la guida con le vostre conoscenze potete contattarmi direttamente su telegram o nel gruppo indicato all’inizio della guida.
+							Per supportare finanziariamente il sito, che ha richiesto e richiedera’ tempo e studio, diventando una sorta di mecenate ed aiutare con i futuri sviluppi ed aggiornamenti contattatemi in privato su telegram oppure utilizzate i tasti
+							donazione nella pagina supporto.
+						</p>
+						<hr />
+				</article>
+			</section>
+		</div>
+	</div>
+	<footer>
+		<a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+			<span>
+				<b>Turtlecute33</b>
+			</span>
+			<span>© 2021</span>
+		</a>
+	</footer>
+</body>
+
+</html>

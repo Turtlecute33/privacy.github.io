@@ -116,10 +116,10 @@
 					<br />
 					<h2>Fare un nodo Bitcoin</h2>
 					<p>
-						  Un primo argomento di vitale importanza da affrontare e'quello dei Full node (<a href="https://cryptonomist.ch/2021/07/04/cosa-sono-i-nodi-di-bitcoin/">?</a>),
-							esistono diversi modi di implementarlo piu' o meno facili (<a href="https://github.com/Fillippone/NodoBitcoinforDummies">Guida di Filippone</a>,<a href="https://github.com/rootzoll/raspiblitz">Usando RaspiBlitz</a> o
-							<a href="https://getumbrel.com/#start")>Umbrel</a>) o anche solo scaricando bitcoincore sul proprio pc, ma quali sono i vantaggi di avere un nodo Bitcoin? in cosa e come migliora la nostra privacy?<br />
-							<br />
+						Un primo argomento di vitale importanza da affrontare e'quello dei Full node (<a href="https://cryptonomist.ch/2021/07/04/cosa-sono-i-nodi-di-bitcoin/">?</a>),
+						esistono diversi modi di implementarlo piu' o meno facili (<a href="https://github.com/Fillippone/NodoBitcoinforDummies">Guida di Filippone</a>,<a href="https://github.com/rootzoll/raspiblitz">Usando RaspiBlitz</a> o
+						<a href="https://getumbrel.com/#start" )>Umbrel</a>) o anche solo scaricando bitcoincore sul proprio pc, ma quali sono i vantaggi di avere un nodo Bitcoin? in cosa e come migliora la nostra privacy?<br />
+						<br />
 						Avere un full node bitcoin ci permette di partecipare attivamente alla rete Bitcoin ma soprattutto di non dover chiedere a nodi sconosciuti casuali nel network informazioni
 						riguardanti il nostro wallet (andremmo a rivelare se non avessimo un nodo di quali indirizzi siamo proprietari, quantita' di bitcoin presente in ogni indirizzo, indirizzo IP e quindi anche localizzazione).<br />
 						<br />
@@ -138,10 +138,21 @@
 							conserva tutti i vostri risparmi")</li>
 					</ul>
 					Possiamo quindi notare come il wallet che il piu'possibile si adatti alle nostre esigenze debba essere obbligatoriamente <b style="color:orange;">non custodial</b>
-					e desktop, possibilmente usato in combinazione con un hardware wallet.<br />
+					e desktop, possibilmente usato in combinazione con un hardware wallet.<br /><br />
 					Il programma che meglio si adatta alle nostre esigenze privacy oriented e'sicuramente <a href="https://wasabiwallet.io/">Wasabi wallet</a> (<a href="http://wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion">Onion link</a>),
 					scaricatelo assolutamente dal link onion (tor) per rimanere il piu possibili anonimi. <br />
-					
+					Le principali features privacy di wasabi sono:
+					<ul>
+						<li>Protezione contro il tracciamento degli indirizzi (un singolo wallet ha un numero enorme di indirizzi al suo interno, quando ci colleghiamo al wallet esso chiede
+							al nodo a cui si connette la quantita' di bitcoin presenti su ogni indirizzo, con Wasabi non andremo a comunicare la lista degli address ma andremo a scaricare interamente i blocchi contenenti le
+							nostre transazioni, cosi' da mitigare il tracciamento dei nostri indirizzi da parte del nodo a cui ci connettiamo)</li><br />
+						<li>Connessione automatica sempre e solo attraverso TOR che e' direttamente incluso all'interno del wallet stesso</li><br />
+						<li>Indirizzi usa e getta automatici e descrizione degli indirizzi (come spiegheremo nella prossima sezione, per avere una buona privacy e' assolutamente
+							obbligatorio usare gli indirizzi sempre e solo una volta, Wasabi wallet automaticamente quando andremo nella sezione 'Ricevi' ci mostrera' un
+							indirizzo nuovo e mai usato con anche una piccola sezione chiamata 'Label' in cui potremo dare una sorta di etichetta all' indirizzo in mondo
+							da ricordarci per cosa abbiamo usato o da chi quella transazione)</li>
+					</ul>
+
 
 
 

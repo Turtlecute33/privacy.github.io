@@ -179,7 +179,16 @@
 						</blackquote>
 						<p>
 							Il resto di una transazione bitcoin viene accreditato su un altro indirizzo appartenente sempre al nostro wallet, infatti, per chi non lo sapesse, i Wallet
-							bitcoin derivano da un unica chiave centinaia di migliaia di indirizzi, in questo modo ognuno di noi con un solo portafoglio puo' sempre e
+							bitcoin derivano da un unica chiave centinaia di migliaia di indirizzi, in questo modo ognuno di noi con un solo portafoglio puo' sempre usare per ogni transazione un
+							indirizzo diverso, questa cosa e' <b>ESTREMAMENTE IMPORTANTE E FONDAMENTALE</b> in quanto ci fa apparire a livello di analisi on-chain come identita' separate
+							(i vari address pur appatenendo allo stesso wallet non sono ricollegabili alla stessa identita' analizzando la blockchain).<br />
+							<br />
+							Il resto di una transazione (La parte di un UTXO che ci viene rimandata indietro nell'immagine precedente) e' una sorta di 'Scoria tossica' per la nostra privacy
+							in quanto e' direttamente ricollegabile utilizzando l'analisi della blockchain al nostro precedente indirizzo da cui era partita la transazione e permette ad un
+							utente malevolo esterno di analizzare lo storico delle transazioni precedenti e future che coinvolgeranno questo resto, collegandole ad un unica identita'.<br />
+							<br />
+							Come fare quindi per 'ripulire' questi resti?
+							ci sono due modi principali e li analizzeremo a breve nelle sezioni successive della guida.
 						</p>
 
 						<hr />

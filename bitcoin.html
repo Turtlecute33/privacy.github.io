@@ -113,7 +113,7 @@
 						<li><a href="#tx">Le transazioni</a></li>
 						<li><a href="#coinjoin">Il coinjoin</a></li>
 						<li><a href="#ln">Lightning Network</a></li>
-						<li><a href="#conclusioni">Conclusioni</a></li>
+						<li><a href="#conclusione">Conclusioni</a></li>
 						<li><a href="supporto.html">Fai una donazione</a></li>
 					</ul>
 					<br />
@@ -166,6 +166,11 @@
 					un nodo con link TOR).
 					</p>
 					<h2 id="tx">Le transazioni</h2>
+					Il primo consiglio che posso darvi quando effettuate transazioni e' quello di aumentare le euristiche coinvolte e fate il possibile per confondere un possibile ente che analizza la blockchain:<br />
+					non inserite output di una transazioni ovvi e con resti minuscoli (esempio: evitate di inviare una transazione da 0.1 BTC, preferite cifre meno 'umane' come per esempio 0.10127644), variate gli orari di invio
+					delle TX e cambiate le impostazioni della transazione stessa spesso (come per esempio usate a volte la funzione <a href="https://www.buybitcoinworldwide.com/rbf/">RBF</a> e a volte no), in questo modo eviterete il
+					fingerprinting.<br /><br />
+
 					Le transazioni bitcoin sono basate sugli <b style="color:orange;">UTXO</b> (Unspent Transaction Output), la comprensione di quest'ultimi e' <b>fondamentale</b>
 					per una buona privacy:<br />
 					I wallet non sono dei contenitori che hanno all' interno semplicemente i vostri bitcoin (come un normale portafoglio con le banconote),
@@ -272,6 +277,15 @@
 					sempre in piccole transazioni diverse e sempre con importi che non sembrino umani (come spiegato prima).
 					</p>
 					<h2 id="conclusione">Conclusione</h2>
+					<p>
+						  Riassumendo la guida possiamo ripassare i punti fondamentali:<br />
+							Se possibile facciamo girare un full node BTC e LN in casa nostra ed utilizziamo Wasabi come nostro wallet desktop,
+							i wallet mobile se potete evitateli o per lo meno teneteli scollegati a livello di transazioni blockchain dal vostro main wallet,
+							usate sempre tor (wasabi lo integra automaticamente) e state attenti a come effettuate le transazioni, ogni indirizzo va usato una volta sola,
+							effettuae transazioni diverse tra loro che non sembrino 'umane' inolte fate il possibile per evitare resti, in caso non ci riusciate ripuliteli
+							coin coinjoin o con transazioni su LN.<br /><br />
+							Spero che la guida vi sia piaciuta e che vi abbia aiutato!
+					</p>
 
 
 					<hr />

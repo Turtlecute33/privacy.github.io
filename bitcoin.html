@@ -159,8 +159,8 @@
 						<li><a href="https://samouraiwallet.com/">Samurai</a></li>
 					</ul>
 					Entrambi pero' per un uso che protegga la nostra privacy necessitano di avere un full node (o dojo per samurai) proprio o di un conoscente in quanto in mancanza di esso
-					il wallet si connettera' a nodi casuali, cosa che vogliamo assolutamente evitare, in caso quindi vogliate usare uno dei due prima di creare/importare
-					il vostro portafoglio connetteteli al vostro nodo ed abilitate TOR (su samurai attivo di default e su blue abilitato automaticamente se lo connettete ad
+					il wallet si connettera' a nodi casuali, cosa che vogliamo assolutamente evitare; in caso vogliate usare uno dei due prima di creare/importare
+					il vostro portafoglio connettetevi al vostro nodo ed abilitate TOR (su samurai attivo di default e su blue abilitato automaticamente se lo si connette ad
 					un nodo con link TOR).
 					</p>
 					<h2 id="tx">Le transazioni</h2>
@@ -172,14 +172,14 @@
 					Le transazioni bitcoin sono basate sugli <b style="color:orange;">UTXO</b> (Unspent Transaction Output), la comprensione di quest'ultimi e' <b>fondamentale</b>
 					per una buona privacy:<br />
 					I wallet non sono dei contenitori che hanno all' interno semplicemente i vostri bitcoin (come un normale portafoglio con le banconote),
-					ma contiengono le vostre monete divise per ogni singola transazione ricevuta (UTXO) ovvero divide metaforicamente il portafoglio in piccole tasche ed
+					ma contiengono le vostre monete divise per ogni singola transazione ricevuta (UTXO) ovvero separa metaforicamente il portafoglio in piccole tasche ed
 					ognuna di queste contiene una transazione che avete ricevuto in passato; quando andremo ad inviare i nostri bitcoin, il wallet, o noi manualmente,
 					potremo spendere una (o piu' in caso non bastino) vecchia transazione ricevuta ed in caso questa sia maggiore dell' importo che vogliamo inviare riceveremo
-					un resto, spieghiamo meglio questa meccanica attraverso una piccola immagine: <br />
+					un resto, spieghiamo meglio questa meccanica attraverso questa immagine: <br />
 					<br />
 					<center><img style="width:85%; height:85%;" src="assets\img\tx.png" /> </center>
 					<blackquote style="color:grey">
-						Alice vorrebbe inviare 4 btc a bob, possiede 3 UTXO: 1 btc, 2 btc e 5 btc; il miglior modo che ha alice per pagare bob e' usare il suo UTXO da 5 btc,
+						Alice vorrebbe inviare 4 btc a bob e possiede 3 UTXO: 1 btc, 2 btc e 5 btc; il miglior modo che ha alice per pagare bob e' usare il suo UTXO da 5 btc,
 						che pero' eccede la quantita' che alice vorrebbe inviare, automaticamente il wallet e il protocollo Bitcoin gestiscono la cosa inviando i 5 btc a bob,
 						ma immediatamente 1 btc torna indietro come resto, in modo che bob riceva la quantita' corretta di btc e alice ottenga indietro la parte in eccesso.
 					</blackquote>
@@ -191,7 +191,7 @@
 						<br />
 						Il resto di una transazione (La parte di un UTXO che ci viene rimandata indietro nell'immagine precedente) e' una sorta di 'Scoria tossica' per la nostra privacy
 						in quanto e' direttamente ricollegabile utilizzando l'analisi della blockchain al nostro precedente indirizzo da cui era partita la transazione e permette ad un
-						utente malevolo esterno di analizzare lo storico delle transazioni precedenti e future che coinvolgeranno questo resto, collegandole ad un unica identita'.<br />
+						utente malevolo esterno di analizzare lo storico delle transazioni passate e future che coinvolgeranno questo resto, collegandole ad un unica identita'.<br />
 						<br />
 						Come fare quindi per 'ripulire' questi resti?
 						ci sono due modi principali e li analizzeremo a breve nelle sezioni successive della guida.
@@ -243,7 +243,7 @@
 						<img style="width:84%; height:85%;" src="assets/img/coinjoin1.png" />
 						<blockquote>Come appare un coinjoin visto da un block explorer (blockstream)</blockquote>
 					</center>
-					Possiamo sfruttare quindi il coinjoin (già integrato all'interno di wasabi wallet) per andare a ripulire tutti i nostri rest. Purtroppo su
+					Possiamo sfruttare quindi il coinjoin (già integrato all'interno del wallet consigliato precedentemente) per andare a ripulire tutti i nostri resti. Purtroppo su
 					wasabi l'importo minimo per effettuare un coinjoin è di 0.1 bitcoin, se non arriviamo a questa cifra possiamo usare <a href="https://hodlhodl.com/">HODL HODL</a>,
 					aspettare il nuovo aggiornamento di wasabi wallet che permetterà coinjoin con qualsiasi cifra (in arrivo a breve) oppure provare a ri-guadagnare privacy utilizzando
 					Lightning Network (da ora abbreviato in LN) come spiegato nella prossima sezione.<br />

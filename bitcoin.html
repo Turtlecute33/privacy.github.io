@@ -210,27 +210,35 @@
 						Questa transazione potrebbe avere fino a quattro partecipanti diversi che firmano gli input, e qui troviamo
 						il principio che rende efficaci i CoinJoin.
 					<h3 style="color:orange">Come funziona il coinjoin</h3>
-						L'idea è che più parti si coordinano per creare una transazione, fornendo ciascuna gli input e gli output desiderati. Dato che tutti gli input vengono combinati,
-						diventa impossibile dire con certezza quale output appartiene a quale utente. Considera il diagramma riportato sotto:<br />
-						<center>
-							<img src="https://academy.binance.com/_next/image?url=https%3A%2F%2Fimage.binance.vision%2Feditor-uploads%2F3862b14074034f5ba73600717ff8e119.png&w=1200&q=100" />
-						</center>
-						Qui, abbiamo quattro partecipanti che vogliono spezzare il collegamento tra transazioni. Si coordinano tra loro (o tramite un coordinatore dedicato) per annunciare
-						gli input e gli output che vogliono includere. <br />
-						<br />
-						Il coordinatore prenderà tutte le informazioni, le userà per creare una transazione, e farà firmare ogni partecipante prima di trasmetterla al network.
-						Quando gli utenti hanno firmato, la transazione
-						non può essere modificata senza diventare invalida. Quindi, non c'è il rischio che il coordinatore scappi con i soldi. <br />
-						<br />
-						La transazione funziona come una sorta di scatola nera per mischiare monete. Ricorda che di fatto distruggiamo UTXO per crearne di nuove.
-						L'unico collegamento tra le vecchie e le nuove UTXO che abbiamo è la transazione stessa, ma, ovviamente, non possiamo distinguere tra i partecipanti.
-						Nella migliore delle ipotesi, possiamo dire che un partecipante ha fornito uno degli input e potrebbe forse essere il nuovo proprietario di un risultante output.
-						Ma anche questo non è affatto garantito. Chi può dire, analizzando la transazione descritta sopra, che ci sono quattro partecipanti?
-						Si tratta di una persona che invia i propri fondi a quattro suoi indirizzi? Due persone che effettuano due acquisti separati e restituiscono 0,2 BTC
-						 ciascuno nei propri indirizzi? Quattro persone che inviano a nuovi partecipanti, o rinviano indietro a sé stessi? Non possiamo esserne sicuri.
-
-						</p>
-						<hr />
+					L'idea è che più parti si coordinano per creare una transazione, fornendo ciascuna gli input e gli output desiderati. Dato che tutti gli input vengono combinati,
+					diventa impossibile dire con certezza quale output appartiene a quale utente. Considera il diagramma riportato sotto:<br />
+					<center>
+						<img src="https://academy.binance.com/_next/image?url=https%3A%2F%2Fimage.binance.vision%2Feditor-uploads%2F3862b14074034f5ba73600717ff8e119.png&w=1200&q=100" />
+					</center>
+					Qui, abbiamo quattro partecipanti che vogliono spezzare il collegamento tra transazioni. Si coordinano tra loro (o tramite un coordinatore dedicato) per annunciare
+					gli input e gli output che vogliono includere. <br />
+					<br />
+					Il coordinatore prenderà tutte le informazioni, le userà per creare una transazione, e farà firmare ogni partecipante prima di trasmetterla al network.
+					Quando gli utenti hanno firmato, la transazione
+					non può essere modificata senza diventare invalida. Quindi, non c'è il rischio che il coordinatore scappi con i soldi. <br />
+					<br />
+					La transazione funziona come una sorta di scatola nera per mischiare monete. Ricorda che di fatto distruggiamo UTXO per crearne di nuove.
+					L'unico collegamento tra le vecchie e le nuove UTXO che abbiamo è la transazione stessa, ma, ovviamente, non possiamo distinguere tra i partecipanti.
+					Nella migliore delle ipotesi, possiamo dire che un partecipante ha fornito uno degli input e potrebbe forse essere il nuovo proprietario di un risultante output.
+					Ma anche questo non è affatto garantito. Chi può dire, analizzando la transazione descritta sopra, che ci sono quattro partecipanti?
+					Si tratta di una persona che invia i propri fondi a quattro suoi indirizzi? Due persone che effettuano due acquisti separati e restituiscono 0,2 BTC
+					ciascuno nei propri indirizzi? Quattro persone che inviano a nuovi partecipanti, o rinviano indietro a sé stessi? Non possiamo esserne sicuri.<br />
+					<br />
+					Possiamo sfruttare quindi il coinjoin (già integrato all'interno di wasabi wallet) per andare a ripulire tutti i nostri rest. Purtroppo su
+					wasabi l'importo minimo per effettuare un coinjoin è di 0.1 bitcoin, se non arriviamo a questa cifra possiamo usare <a href="https://hodlhodl.com/">HODL HODL</a>,
+					aspettare il nuovo aggiornamento di wasabi wallet che permetterà coinjoin con qualsiasi cifra (in arrivo a breve) oppure provare a ri-guadagnare privacy utilizzando
+					Lightning Network (da ora abbreviato in LN) come spiegato nella prossima sezione.<br />
+					<center>
+						<img src="assets/img/coinjoin1.png" />
+						<blockquote>Come appare un coinjoin visto da un block explorer (blockstream)</blockquote>
+					</center>
+					</p>
+					<hr />
 				</article>
 			</section>
 		</div>

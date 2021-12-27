@@ -196,11 +196,11 @@
 						alla struttura di una transazione normale.
 						Le transazioni Bitcoin sono costituite da input e output. Quando un utente vuole effettuare una transazione, prende i suoi UTXO come input,
 						specifica gli output e firma gli input. E' importante sottolineare che ciascun input viene firmato in modo indipendente, e gli utenti
-						possono impostare output multipli (destinati a diversi indirizzi).<br />
+						possono impostare output multipli (destinati a diversi indirizzi).<br /><br />
 						<center>
 							<img src="https://academy.binance.com/_next/image?url=https%3A%2F%2Fimage.binance.vision%2Feditor-uploads%2F01ebb344caee47eb807b6d3fa83f309e.png&w=1920&q=100" />
 						</center>
-						<br />
+						<br /><br />
 						Se analizziamo una transazione composta da quattro input (0,2 BTC ciascuno) e due output (0,7 BTC e 0,09 BTC), possiamo fare alcune supposizioni.
 						La prima è che stiamo guardando lo svolgimento di un pagamento – il mittente sta inviando uno degli output a
 						qualcuno, e restituendo il resto a sé stesso. Dato che ha usato quattro input, l'output più grande è probabilmente
@@ -213,11 +213,11 @@
 					<h3 style="color:orange">Come funziona il coinjoin</h3>
 					L'idea è che più parti si coordinano per creare una transazione, fornendo ciascuna gli input e gli output desiderati. Dato che tutti gli input vengono combinati,
 					diventa impossibile dire con certezza quale output appartiene a quale utente. Considera il diagramma riportato sotto:<br />
-					<br />
+					<br /><br />
 					<center>
 						<img src="https://academy.binance.com/_next/image?url=https%3A%2F%2Fimage.binance.vision%2Feditor-uploads%2F3862b14074034f5ba73600717ff8e119.png&w=1200&q=100" />
 					</center>
-					<br />
+					<br /><br />
 					Qui, abbiamo quattro partecipanti che vogliono spezzare il collegamento tra transazioni. Si coordinano tra loro (o tramite un coordinatore dedicato) per annunciare
 					gli input e gli output che vogliono includere. <br />
 					<br />
@@ -232,11 +232,11 @@
 					Si tratta di una persona che invia i propri fondi a quattro suoi indirizzi? Due persone che effettuano due acquisti separati e restituiscono 0,2 BTC
 					ciascuno nei propri indirizzi? Quattro persone che inviano a nuovi partecipanti, o rinviano indietro a sé stessi? Non possiamo esserne sicuri.<br />
 					<br />
+					<br />
 					<center>
-						<img style="width:85%; height:85%;" src="assets/img/coinjoin1.png" />
+						<img style="width:78%; height:85%;" src="assets/img/coinjoin1.png" />
 						<blockquote>Come appare un coinjoin visto da un block explorer (blockstream)</blockquote>
 					</center>
-					<br />
 					Possiamo sfruttare quindi il coinjoin (già integrato all'interno di wasabi wallet) per andare a ripulire tutti i nostri rest. Purtroppo su
 					wasabi l'importo minimo per effettuare un coinjoin è di 0.1 bitcoin, se non arriviamo a questa cifra possiamo usare <a href="https://hodlhodl.com/">HODL HODL</a>,
 					aspettare il nuovo aggiornamento di wasabi wallet che permetterà coinjoin con qualsiasi cifra (in arrivo a breve) oppure provare a ri-guadagnare privacy utilizzando

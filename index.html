@@ -60,10 +60,6 @@
 					<a href="supporto.html">
 						<h2 class="header-link">Donazioni</h2>
 					</a>
-					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-					<a href="index_eng.html">
-						<h6 class="header-link">English</h6>
-					</a>
 				</div>
 			</div>
 		</header>
@@ -78,15 +74,15 @@
 					<center>
 						<img style="width:95%; height:95%;" src="assets/img/1.png">
 					</center>
-					<p>Questa vuole essere una guida completa per ottenere un telefono android completamente de-googled e con la massima privacy possibile, pur mantenendo la minima usabilità e
+					<p>Questa vuole essere una guida completa per ottenere un telefono android completamente de-googled con la massima privacy e sicurezza possibile, pur mantenendo l'usabilità e
 						comodità del dispositivo.</p>
 					<figure>
 						<blackquote style="color:grey">
 							La guida è aperta a miglioramenti e consigli,descriverò la configurazione che trovo con il miglior rapporto usabilità/privacy, nel tempo ampierò le varie sezioni introducendo
 							anche le varie alternative per chi magari non si trova bene
 							con una determinata app o servizio,
-							Se volete darmi consigli, contribuire alla guida o effettuare traduzioni, potete scrivermi @turtlecute su telegram o entrare nel gruppo telegram che ho creato riguardante la guida:
-							<a href="https://t.me/androidprivacyITA">https://t.me/androidprivacyITA</a>
+							Se volete darmi consigli, contribuire alla guida o effettuare traduzioni, potete trovare i miei contatti nella pagina <a href="supporto.html"> Donazioni</a> o effettuare
+							una pull request su <a href="https://github.com/Turtlecute33/privacy.github.io">GitHub</a>.
 						</blackquote>
 					</figure>
 
@@ -115,11 +111,11 @@
 					<ol>
 						<li>Sbloccare il bootloader</li>
 						<li>Flashare una recovery</li>
-						<li>Flashare <a href="https://lineage.microg.org/">Lineage OS </a>versione microG</li>
+						<li>Flashare <a href="https://lineage.microg.org/">Lineage OS</a> versione microG</li>
 					</ol>
 					<figure>
 						<blackquote style="color:grey"><code class="language-plaintext highlighter">
-								Attenzione, la versione base senza app di google è di gran lunga preferibile ma utilizzando microG senza aggiungere nessun account
+								Attenzione, la versione base senza app di google è di gran lunga preferibile <b>(e fortemente consigliata)</b> ma utilizzando microG senza aggiungere nessun account
 								google potremo almeno utilizzare i servizi base di android senza andare in contro a crash e malfunzioni di app dipendenti
 								dai google play services e ricevere anche le notifiche di tutte le app in quanto alcune senza play services danno problemi
 								nelle notifiche.
@@ -153,50 +149,51 @@
 						<li> <a href="https://www.f-droid.org/">F-Droid </a> (store alternativo di app FOSS/Open Source) possibilmente installeremo da qua le applicazioni ma non aspettatevi
 							di trovare instagram o facebook, continente solo app opensource quindi al massimo troverete delle loro alternative FOSS.</li>
 						<li><a href="https://www.f-droid.org/packages/com.looker.droidify/">Droid-ify</a> (alternativa opensource/fork di fdroid com una grafica meglio curata e qualche funzione in più,
-							a mio parere la migliore alternativa se cercate una UI un po più elegante)</li>
+							a mio parere la migliore alternativa se cercate una UI un po più elegante).</li>
 						<li><a href="https://files.auroraoss.com/AuroraStore/Stable/">Aurora Store</a> (vi permette di usare il vecchio store google ma sempre attraverso account fittizi e diversi
 							ogni volta automaticamente generati da lui,
-							mi raccomando usate la modalità ospite/anonima o sarà inutile )</li>
-					</ul>
+							mi raccomando usate la modalità ospite/anonima o sarà inutile).</li>
+					</ul><br />
 					<h2 id="shelter">Shelter</h2>
 					<p>
 						Ora che abbiamo gli store configurati possiamo procedere al download di <a href="https://f-droid.org/packages/net.typeblog.shelter/">Shelter</a>,
-						se avevate già aperto l'app di Fdroid/Droidify in precedenza dovrebbe apririve il link direttamente in app.<br />
-						Shelter è un applicazione opensource che ci permette di creare un work profile ovvero un secondo profilo nel telefono che funziona contemporaneamente al primo ma in modo
-						totalmente isolato e indipendente:<br />
+						se avevate già aperto l'app di Fdroid/Droidify in precedenza dovrebbe aprirvi il link direttamente in app.<br />
+						Shelter è un applicazione OpenSource che ci permette di creare un work profile, ovvero un secondo profilo nel telefono che funziona contemporaneamente al primo ma in modo
+						totalmente isolato e indipendente:<br /><br />
 						immaginate un tavolo (il nosto sistema operativo) su cui poggiano due scatole completamente chiuse e sigillate (i nostri due profili),
-						queste due sono completamente indipendenti e separate ma poggiano su una base comune, se l'OS del nostro telefono è il primo ad essere sporco e pieno di app traccianti
-						come i Google Play Services l'utilizzo di shelter diventa in buona parte inutile, in caso proprio non vogliate cambiare rom usate almeno questo <a href="https://github.com/0x192/universal-android-debloater">Android Debloater</a>
-						che vi permette di disabilitare (ATTENZIONE disabilitate le app, non disinstallatele, potrebbe corrompervi il sistema se avete il telefono criptato).<br /><br />
+						queste due sono completamente indipendenti e separate ma usano una base comune, se l'OS del nostro telefono è il primo ad essere sporco e pieno di app traccianti
+						come i Google Play Services, l'utilizzo di shelter diventa in buona parte inutile, in caso proprio non vogliate cambiare rom usate almeno questo <a href="https://github.com/0x192/universal-android-debloater">Android Debloater</a>
+						che vi permette di disabilitare in pochi e semplici click le principali app tossiche per la privacy incluse nei maggiori sistemi operativi di default
+						(ATTENZIONE disabilitate le app, non disinstallatele, o rischiate di corrompere il sistema se avete il telefono criptato).<br /><br />
 						Una volta aperto shelter si aprirà un menu di configurazione del profilo di lavoro, una volta attivato accederemo all'interfaccia dell'app che è divisa in 2 sezioni:<br />
 					<ul>
-						<li><b>Main</b> ovvero il profilo principale in cui installeremo solo app open source o senza accesso ad internet</li>
-						<li><b>Shelter</b> ovvero la sezione in cui isoleremo tutte le applicazioni malevole e traccianti come i social, le app bancarie o non open source</li>
+						<li><b>Main</b> ovvero il profilo principale in cui installeremo solo app open source o senza accesso ad internet.</li>
+						<li><b>Shelter</b> ovvero la sezione in cui isoleremo tutte le applicazioni malevole e traccianti come i social, le app bancarie o non open source.</li>
 					</ul>
 					<br />
 					i 2 profili sono perfettamente separati e vedremo le app installate in quello principale come normali icone, quelle installate nel profilo di lavoro invece
-					presenteranno una piccola icona che le distingue dalle altre, esse coesisteranno all'interno dello stesso launcher.
+					presenteranno un piccolo badge che le distingue dalle altre, esse coesisteranno all'interno dello stesso launcher.
 					Per installare le app nel profilo desiderato ci basterà usare uno di questi 3 metodi:
 					<ul>
 						<li>Dall'app shelter clonare un app da un profilo ad un altro (o dai settings usare la funzione installa apk).</li>
 						<li>Scaricare le app da uno store installato in quel profilo (installate Droidify sul profilo principale e pulito mentre aurora in quello sporco e con le app traccianti).</li>
 						<li>Installare apk scaricati da internet (se possibile scaricate tutto da Droidify in quanto è MOLTO piu sicuro).</li>
 					</ul>
-					I due sistemi saranno perfettamente isolati, cosa abbastanza scomoda per la gestione dei contatti, galleria, file, ecc..<br />
-					nelle impostazioni di shelter è possibile attivare una funzione che permette solo all'utente di far parzialmente parlare i due sistemi per la condivisione dei file,
+					I due sistemi saranno perfettamente isolati, cosa abbastanza scomoda per la gestione dei contatti, galleria, file, ecc.. in quanto ognuno avra' i suoi.
+					Nelle impostazioni di shelter è possibile attivare una funzione che permette solo all'utente di far parzialmente parlare i due sistemi per la condivisione dei file,
 					nonostante questo la gestione del tutto rimarrà un po' scomoda fino a quando non ci farete l'abitudine.
 					</p>
 					<br />
-					<h2>Gestione dei thret model tra i profili</h2>
+					<h2>Gestione dei threat model tra i profili</h2>
 					<p>
 						Ora che abbiamo due sistemi completamente diversi e isolati andremo ad applicare un threat model differente in entrambi,
-						nel primo (pulito ed opensource) punteremo alla massima privacy facendo passare tutto il traffico tramite TOR e DNScrypt, nel secondo (sporco e con elementi traccianti)
-						invece punteremo a ridurre il più possibile il leak di nostre informazioni personali, coscienti di utilizzare comunque applicazioni che probabilmente hanno già i nostri dati personali
+						nel primo (pulito ed opensource) punteremo alla massima privacy facendo passare tutto il traffico dati attraverso TOR e DNScrypt, nel secondo (sporco e con elementi traccianti)
+						invece punteremo a ridurre il più possibile il leak di nostri dati, coscienti di utilizzare comunque applicazioni che probabilmente hanno già i nostri dati personali
 						(andremo quindi a limitare il più possibile pubblicità e trackers).<br /><br />
 						Come prima cosa ci concentriamo sul main profile ed andiamo a scaricare <a href="https://www.f-droid.org/packages/pan.alexander.tordnscrypt.stable/">InviziblePro</a>,
 						un applicazione che reindirizzerà tutto il traffico sotto tor e con anche ulteriori protezioni.<br />
 						una volta aperta l'applicazione dal menù in alto a destra con i 3 puntini attiviamo la modalità VPN,
-						rechiamoci quindi nelle impostazioni del telefono nella sezione rete -> avanzate/VPN -> InvisiblePro qui attiviamo la modalità 'VPN sempre attiva' e
+						rechiamoci quindi nelle impostazioni del telefono nella sezione <b>rete -> avanzate/VPN -> InvisiblePro</b>, qui attiviamo la modalità 'VPN sempre attiva' e
 						'blocca connessioni senza VPN', in questo modo tutto il traffico passerà attraverso Invisible ed eviteremo qualsiasi leak di dati.<br /><br />
 						Ora che abbiamo impostato correttamente la rete andiamo a modificare alcune impostazioni all'interno di Invisible:
 					<ul>
@@ -208,61 +205,73 @@
 							Nella sezione <b>Fast Settings</b> abilitiamo 'avvia DNSCrypt all'avvio' e 'avvia TOR all'avvio', in questo modo saremo sempre protetti al 100%.
 						</li>
 						<li>
-							Sempre nella sezione <b>Fast Settings</b>, in fondo, abilitiamo l'update automatico attraverso TOR (facoltativo).
+							Sempre in <b>Fast Settings</b>, in fondo, abilitiamo l'update automatico attraverso TOR (facoltativo).
 						</li>
 						<li>
-							Sempre nelle impostazioni rechiamoci in <b>Common Settings</b> e abilitiamo tutte e 3 le protezioni della sezione <b>MITM attack detection</b>,
+							Nelle impostazioni rechiamoci in <b>Common Settings</b> e abilitiamo tutte e 3 le protezioni della sezione <b>MITM attack detection</b>,
 							queste proteggeranno il nostro dispositivo quando connessi a wifi pubblici.
 						</li>
 						<li>
 							Infine rechiamoci nella categoria <b>Firewall</b> e disabilitiamo l'accesso ad internet a tutte le applicazioni che non ne hanno bisogno (come per esempio la galleria, la tastiera, i giochi offline, ecc)
 						</li>
 					</ul>
-					a questo punto il main profile è pronto per essere usato, ci possiamo ora dedicare al profilo di lavoro, quello con le applicazioni non open source.<br /><br />
-
-
-
-
-
+					a questo punto il main profile è pronto per essere usato, ci possiamo ora dedicare al profilo di lavoro, quello con le applicazioni non open source.<br />
+					Qui possiamo adottare due diverse tecniche per la protezione dei dati:</p>
+					<ul>
+						<li>Usare una VPN in caso cerchiamo protezione verso il nostro ISP (tramite essa possiamo anche filtrare pubblicita' e tracker).</li>
+						<li>Usare <a href"https://github.com/M66B/NetGuard/releases">NetGuard</a> per bloccare l'acceso ad internet alle applicazioni che non lo necessitano
+							ed aggiungere il blocco delle pubblicita' e tracker tramite l'implementazione di un Host filter.</li>
+					</ul>
+					entrambe le opzioni sono valide, la decisione dipende principalmente dalla vostra volonta' o meno di usare un servizio VPN, in caso vogliate approfondire
+					l'argomento potete dare un occhio anticipatamente alla <a href="#cloud">sezione apposita</a>.<br />
+					Se invece preferite usare NetGuard consiglio di implementare gli Host file di <a href="https://github.com/EnergizedProtection/block">Energized Protection</a>.
 					</p>
 
 					<h2 id="app">Applicazioni</h2>
-					<p>Ora che abbiamo gli store installati andiamo a scaricare alcune app fortemente consigliate:</p>
+					<p>Ora che abbiamo gli store e le reti ben configurate passiamo a scaricare alcune app fortemente consigliate:</p>
 					<ul>
 						<li><a href="https://www.f-droid.org/packages/org.dslul.openboard.inputmethod.latin/">OpenBoard</a> (faccio un piccolo discorso su questa app, è una tastiera android opensource esattamente uguale alla Gboard,
-							so che molti sono abituati a google board o swiftkey ma per l’amor del cielo evitatele, ho provato a bloccare vari processi e l’accesso ad internet alla google board ma analizzando
-							i dati scambiati con la mia rete ho notato che riusciva comunque a comunicare con i server google, per favore usate openboard o altre tastiere opensource offline)</li>
-						<li><a href="https://www.bromite.org/">Bromite</a> (A mio parere il miglior broswer android, purtroppo firefox e tutti i suoi fork non supportano su android l'isolazione delle pagine e dei cookie,
-							questo crea un enorme problema di privacy, bromite invece e' basato su chromium e anche se non supporta le estensioni, ha gia internamente abilitabile un adblock che supporta liste personalizzate e
-							possiede anche vari tweak anti fingerprint)</li>
+							so che molti sono abituati a google board o swiftkey ma per l’amor del cielo evitatele, ho provato a bloccare vari processi e l’accesso ad internet alla Tastiera ma analizzando
+							i dati scambiati con la mia rete ho notato che riusciva comunque a comunicare con i server google, per favore usate openboard o altre tastiere opensource offline).</li>
+						<li><a href="https://www.bromite.org/">Bromite</a> (A mio parere il miglior broswer android, purtroppo firefox e tutti i suoi fork non supportano su android l'isolazione delle pagine,
+							questo crea un enorme problema di sicurezza, bromite invece e' basato su chromium e anche se non supporta le estensioni, ha gia internamente abilitabile un adblock che supporta liste personalizzate e
+							possiede anche vari tweak anti fingerprinting).</li>
+							<li><a href="https://android.izzysoft.de/repo/apk/com.saggitt.omega">Omega launcher</a> (Ottimo launcher open source, fork di quello AOSP ma con piu' personalizzazioni, si integra perfettamente anche con shelter creando 2 menu'
+								delle applicazioni).</li>
 						<br />
-						<p style="color:grey">A questo punto possiamo procedere al download delle nostre applicazioni personali, sicuramente ci sono app di cui faremo fatica a fare a meno: social,
-							app bancarie, ecc… vi lascio qua di seguito una lista delle alternative o quelle a mio parere open source più utili:</p>
+						<p style="color:grey">A questo punto possiamo procedere al download delle applicazioni facendo attenzione al profilo nel quale le installiamo, personalmente
+							uso fdroid sul sistema pulito e aurora in quello con le app traccianti, vi lascio una piccola lista di app OpenSource e privacy oriented che potrebbero tornarvi utili:</p>
 						<br />
 						<li><a href="https://www.f-droid.org/packages/com.beemdevelopment.aegis/">Aegis</a>(alternativa opensource ed offline a authy/google authenticator)</li>
 						<li><a href="https://f-droid.org/packages/de.danoeh.antennapod/">Antenna pod</a>(lettore di podcast totalmente opensource, Usa come fonte i principali lettori podcast esistenti)</li>
 						<li><a href="https://github.com/bitwarden/mobile/releases">Bitwarden</a>(miglior password manager, estremamente sicuro ed open source, consentente anche il self-hosting)</li>
+						<li><a href="https://f-droid.org/packages/de.cloneapps.crypto_prices">Crypto prices</a>(alternativa opensource a Coin Market Cap)</li>
 						<li><a href="https://www.f-droid.org/packages/com.pitchedapps.frost/">Frost</a>(per quanto disprezzi e sconsigli l’utilizzo di facebook se proprio non riuscite a farne a meno consiglio di utilizzare frost,
 							un client opensource per facebook)</li>
 						<li><a href="https://f-droid.org/it/packages/cf.theonewiththebraid.guerrilla_mail/">Guerrilla mail</a>(client open source per guerrilla mail ovvero una temp mail per gli spam)</li>
 						<li><a href="https://www.f-droid.org/packages/ml.docilealligator.infinityforreddit/">Infinity</a>(client di ottima qualità open source di reddit, a mio parere meglio della app originale!!)</li>
 						<li><a href="https://www.f-droid.org/packages/org.proninyaroslav.libretorrent/">Libre torrent</a>(semplice,comodo e veloce open source client torrent per android)</li>
+						<li><a href="https://f-droid.org/packages/com.lesspass.android/">Less Pass</a> (Applicazione che ci permette di generare password derivate dalla combinazione di sito + nome utente + Una password fissa, l'eccellenza per avere password
+							sicure)</li>
 						<li><a href="https://molly.im/">Molly</a>(una versione hardened e ripulita dal codice google di signal, portebbe essere una buona idea registrarsi con un numero di una sim comprata senza documenti se legale nel vostro stato)</li>
+						<li><a href="https://nekogram.app/">Nekogram</a>(client open source per telegram che non si appoggia ai servizi google ed implementa PGP)</li>
 						<li><a href="https://www.f-droid.org/packages/org.schabi.newpipe/">Newpipe</a>(client open source di peertube, tutti i video di YouTube ma senza google!)</li>
 						<li><a href="https://f-droid.org/en/packages/com.nextcloud.client/">Nextcloud</a>(Client per usare e syncare nextcloud, a mio parere il migliore softwere per farsi un server multimediale in casa)</li>
 						<li><a href="https://www.f-droid.org/packages/org.sufficientlysecure.keychain/">Open keychain</a>(app per gestire le nostre chiavi PGP o per integrarle nelle applicazioni di messaggistica / e-mail)</li>
+						<li><a href="https://www.f-droid.org/packages/com.btcontract.wallet/">Simple Bitcoin Wallet</a>(Wallet open source leggero, veloce e dalla ottima UI per gestire i vostri bitcoin)</li>
 						<li><a href="https://www.f-droid.org/packages/io.simplelogin.android.fdroid/">Simplelogin</a>(una sorta di proxy e-mail anti spam, crea delle e-mail esca con cui registrarvi ai siti che automaticamente girano Le e-mail ad altri
 							indirizzi da voi scelti, in questo modo non dovete dare la vostra e-mail a siti esterni, inoltre potete eliminare o sospendere le e-mail esca quando volete in modo da interrompere la ricezione delle e-mail sul vostro account
 							principale)</li>
-						<li><a href="https://www.f-droid.org/packages/org.telegram.messenger/">Telegram FOSS</a>(client open source per telegram che non si appoggia ai servizi google)</li>
+						<li><a href="https://f-droid.org/packages/com.brentpanther.bitcoinwidget/">Simple crypto widget</a>(Per avere i prezzi aggiornati della vosta criptoval...COFF COFF di bitcoin sulla vostra home page)</li>
+						<li><a href="https://www.f-droid.org/packages/com.simplemobiletools.filemanager.pro/">Simple file manager</a>(File manager open source dall’ottima grafica e con permessi root opzionali)</li>
 						<li><a href="https://www.torproject.org/download/#downloads-alpha">Tor Browser</a>(broswer tor ufficiale con libreria tor integrata, utile per navigare online senza rivelare l’indirizzo IP, non garantisce un anonimato al 100% come ogni
 							cosa ma è un ottimo scudo per la privacy, utile per navigare nei siti .onion)</li>
 						<li><a href="https://github.com/Treecord/Treecord">Treecord</a>(versione open source e con tracker bloccati del client discord per android)</li>
 						<li><a href="https://www.f-droid.org/packages/de.ph1b.audiobook/">Voice</a>(lettore offline e opensource di audiolibri)</li>
-						<li><a href="https://www.f-droid.org/packages/com.simplemobiletools.filemanager.pro/">Simple file manager</a>(File manager open source dall’ottima grafica e con permessi root opzionali)</li>
 					</ul>
 					<p>
-						Per ulteriori applicazioni, browser e servizi privacy friendly consiglio di dare un occhio a <a href="https://www.privacytools.io/">privacytools</a> e <a href="https://privacyguides.org/providers/">privacyguides</a>.
+						Per ulteriori applicazioni, browser e servizi privacy friendly consiglio di dare un occhio a <a href="https://www.privacytools.io/">privacytools</a>, <a href="https://privacyguides.org/providers/">privacyguides</a> o cercare nelle varie
+						categorie su Droidify.
 					</p>
 					<h2 id="email">Client e provider email</h2>
 					<p>
@@ -322,7 +331,8 @@
 						Il discorso VPN invece è particolare, una vpn teoricamente cripta il nostro traffico e lo fa passare attraverso un suo nodo mettendosi tra noi e il nostro ISP andando cosi a darci privacy verso di esso ma obbligandoci a fidarci del
 						servizio vpn stesso.
 						<br />
-						Tutti le aziende in questo settore promettono privacy e politiche di no logging ma praticamente il 99% delle VPN più che darci privacy ce la fanno perdere, l’unica che mi sento davvero di consigliarvi è <a href="https://mullvad.net/en/">Mullvad</a> (<a href="http://o54hon2e2vj6c7m3aqqu6uyece65by3vgoxxhlqlsvkmacw6a7m7kiad.onion/en/">onion link</a>),è ovviamente
+						Tutti le aziende in questo settore promettono privacy e politiche di no logging ma praticamente il 99% delle VPN più che darci privacy ce la fanno perdere, l’unica che mi sento davvero di consigliarvi è <a
+							href="https://mullvad.net/en/">Mullvad</a> (<a href="http://o54hon2e2vj6c7m3aqqu6uyece65by3vgoxxhlqlsvkmacw6a7m7kiad.onion/en/">onion link</a>),è ovviamente
 						obbligatorio pagarla in bitcoin per avere un privacy maggiore.
 					</p>
 					<h2 id="conc">Conclusioni Finali</h2>

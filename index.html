@@ -236,8 +236,8 @@
 						<li><a href="https://www.bromite.org/">Bromite</a> (A mio parere il miglior broswer android, purtroppo firefox e tutti i suoi fork non supportano su android l'isolazione delle pagine,
 							questo crea un enorme problema di sicurezza, bromite invece e' basato su chromium e anche se non supporta le estensioni, ha gia internamente abilitabile un adblock che supporta liste personalizzate e
 							possiede anche vari tweak anti fingerprinting).</li>
-							<li><a href="https://android.izzysoft.de/repo/apk/com.saggitt.omega">Omega launcher</a> (Ottimo launcher open source, fork di quello AOSP ma con piu' personalizzazioni, si integra perfettamente anche con shelter creando 2 menu'
-								delle applicazioni).</li>
+						<li><a href="https://android.izzysoft.de/repo/apk/com.saggitt.omega">Omega launcher</a> (Ottimo launcher open source, fork di quello AOSP ma con piu' personalizzazioni, si integra perfettamente anche con shelter creando 2 menu'
+							delle applicazioni).</li>
 						<br />
 						<p style="color:grey">A questo punto possiamo procedere al download delle applicazioni facendo attenzione al profilo nel quale le installiamo, personalmente
 							uso fdroid sul sistema pulito e aurora in quello con le app traccianti, vi lascio una piccola lista di app OpenSource e privacy oriented che potrebbero tornarvi utili:</p>
@@ -281,27 +281,26 @@
 						<br />
 						In caso vogliamo un servizio rapido e comodo ma in cui dobbiamo riporre fiducia in un ente terzo consiglio <a href="https://github.com/ProtonMail/proton-mail-android/releases">Proton mail</a>,
 						da usare solo tramite Tor, oppure <a href="https://www.f-droid.org/packages/de.tutao.tutanota/">tutanota</a>, che sembra essere un azienda piu'
-						trasparente, ma dichiara di loggare gli indirizi IP degli utenti; possibilmente eviterei l'uso di entrambi questi provider in quanto promettono anonimato ma gia'in passato
-						non hanno rispettato questa clausola e potrebbero essere degli honeypot(<a href="https://it.wikipedia.org/wiki/Honeypot" )>?</a>) pero' entrambe auto-criptano i messaggi verso le email
+						trasparente, ma dichiara di loggare gli indirizi IP degli utenti; personalmente eviterei l'uso di entrambi questi provider in quanto promettono anonimato ma gia' in passato
+						non hanno rispettato questa clausola e potrebbero essere degli honeypot(<a href="https://it.wikipedia.org/wiki/Honeypot" )>?</a>), entrambe però auto-criptano i messaggi verso le email
 						dello stesso provider (tutanota con tutanota e proton con proton).
 						<br />
 						<br />
 						Un opzione a mio parere molto valida e'quella di usare come client (quindi come app su cui riceviamo le mail) <a href="https://f-droid.org/en/packages/com.fsck.k9/">
-							K-9 Email </a> e come provider (quindi come servizio email da collegare a k9) o un servizio a pagamento come <a href="https://email.faircode.eu/">fairemail</a> oppure possiamo provare
-						a contattare/farci invitare da qualche gruppo />collettivo privacy friendly o anarchico come <a href="https://riseup.net/">Riseup</a> o <a href="https://www.autistici.org/">autistici</a>,
+							K-9 Email</a> e come provider (quindi come servizio email da collegare a k9) o un servizio a pagamento come <a href="https://email.faircode.eu/">fairemail</a> o provare
+						a contattare/farci invitare da qualche gruppo / collettivo privacy friendly o anarchico come <a href="https://riseup.net/">Riseup</a>, <a href="https://esiliati.org/">Esiliati</a> o <a href="https://www.autistici.org/">autistici</a>,
 						quest'ultimo pero'in passato ha subito vari hack, quindi consiglio magari altre alternative.
 						<br />
 						<br />
 						Molto interessante all'interno delle impostazioni di K9 e' l'opzione di auto-criptazione delle email:
 						importando una chiave PGP da openkeychain (app sopra trattata) e'possibile criptare automaticamente le email verso le persone che a loro volta hanno importato una chiave PGP.
-						dopo una prima email non criptata k9 auto importa la public key dell'altra persona permettendoci cosi di scambiare email criptate senza doversi passare le chiavi.
+						dopo una prima email non criptata k9 auto importa la public key dell'altra persona permettendoci cosi di scambiare email criptate senza doversi passare le chiavi (da abilitare nei settings di k9).
 					</p>
 					<p><code class="language-plaintext highlighter-rouge">A questo punto della guida dovreste aver già installato tutte le vostre
-							applicazioni personali e quelle da me indicate e/o consigliate, ora possiamo andare ad agire sulla pulizia
-							dei servizi di tracking delle app sul nostro dispositivo.</code></p>
+							applicazioni personali e quelle da me indicate e/o consigliate, possiamo agire ora sui vari permessi, in caso installiate in futuro altre app eseguite questa procedura anche per esse.</code></p>
 					<h2 id="permessi">Gestione dei permessi delle app</h2>
 					<p>Come primo passo ci rechiamo nelle impostazioni del nostro telefono e andiamo nella sezione applicazioni → avanzate → gestione permessi e qui rimuoviamo ogni permesso superfluo delle applicazioni (con superfluo intendo che per esempio,
-						un app come whatsapp, ha bisogno dei nostri contatti se vogliamo trovarli, quindi per il corretto funzionamento dell’applicazione conviene lasciargli questo permesso, ma possiamo tranquillamente disabilitare l’accesso ai messaggi in
+						un app come whatsapp, ha bisogno dei nostri contatti se vogliamo trovarli, quindi per il corretto funzionamento dell’applicazione conviene lasciarglielo, ma possiamo tranquillamente disabilitare l’accesso ai messaggi in
 						quanto verrà usato solo la prima volta quando faremo il login per velocizzare il primo accesso, dopo di che se lasciato attivo concede a whatsapp la possibilità di spiare tutti i nostri SMS).
 						<br />
 						<br />
@@ -315,14 +314,15 @@
 						comodamente andando nelle informazioni su un applicazioni → dati e rete → disabilitiamo ‘accesso alla rete’.
 						<br />
 						<br />
-						In caso vogliate essere ulteriormente certi del blocco di internet a queste app potete usare servizi come AFWALL per bloccarle dietro un firewall, non sottovalutate l’accesso ad internet delle app, molte, nonostante non abbia bisogno di
+						In caso vogliate essere ulteriormente certi del blocco di internet a queste app potete usare servizi come i precedentemente trattati netguard e invisible per bloccarle dietro un firewall, non sottovalutate l’accesso ad internet delle app,
+						molte, nonostante non abbia bisogno di
 						quest’ultimo per il funzionamento, lo usano di continuo per condividere nostri dati.
 					</p>
 
 					<h2 id="cloud">Cloud e Vpn</h2>
 					<p>
 						Faccio una piccola sezione a parte per questi due sotto-argomenti:
-						La migliore soluzione cloud sarebbe il self hosting con nextcloud (a mio parere la miglior scelta ), in caso ciò non sia possibile la soluzione a mio parere piu semplice e veloce è <a href="http://mega.nz/">Mega.nz</a> (20gb gratis e
+						La migliore soluzione cloud sarebbe il self hosting con nextcloud (a mio parere la miglior scelta), in caso ciò non sia possibile la soluzione a mio parere piu semplice e veloce è <a href="http://mega.nz/">Mega.nz</a> (20gb gratis e
 						5gb di bandwith ed accetta
 						pagamento in bitcoin per i pro plans) se vogliamo invece una sicurezza aggiuntive possiamo usare un cloud con il supporto a WebDav come icedrive in combinazione con <a href="https://cryptomator.org/">Cryptomator</a> (programma che
 						cripta i file prima dell’upload in cloud).
@@ -331,16 +331,16 @@
 						Il discorso VPN invece è particolare, una vpn teoricamente cripta il nostro traffico e lo fa passare attraverso un suo nodo mettendosi tra noi e il nostro ISP andando cosi a darci privacy verso di esso ma obbligandoci a fidarci del
 						servizio vpn stesso.
 						<br />
-						Tutti le aziende in questo settore promettono privacy e politiche di no logging ma praticamente il 99% delle VPN più che darci privacy ce la fanno perdere, l’unica che mi sento davvero di consigliarvi è <a
+						Tutte le aziende in questo settore promettono privacy e politiche di no logging ma praticamente il 99% delle VPN più che darci privacy ce la fanno perdere, l’unica che mi sento davvero di consigliarvi è <a
 							href="https://mullvad.net/en/">Mullvad</a> (<a href="http://o54hon2e2vj6c7m3aqqu6uyece65by3vgoxxhlqlsvkmacw6a7m7kiad.onion/en/">onion link</a>),è ovviamente
 						obbligatorio pagarla in bitcoin per avere un privacy maggiore.
 					</p>
 					<h2 id="conc">Conclusioni Finali</h2>
 					<p>
-						Seguendo questa guida avremo ridotto drasticamente la condivisione di dati personali, cio’ non garantisce in nessun modo l’anonimato ma solamente aumenta decisamente la privacy nell’utilizzo del dispositivo.
+						Seguendo questa guida avremo ridotto drasticamente la condivisione di dati personali, cio’ non garantisce in nessun modo l’anonimato ma solamente aumenta decisamente la privacy e la sicurezza nell’utilizzo del dispositivo.
 						<br />
 						<br />
-						L’utilizzo di MicroG (fondamentale se volete ricevere le notifiche a schermo bloccate e volete usare molte app non open source quali quelle bancarie e vari social) lascia che comunque una piccola quantita’ di dati venga inviata a
+						L’utilizzo di MicroG lascia che comunque una piccola quantita’ di dati venga inviata a
 						dei
 						server google ma se seguite correttamente cio’ che ho scritto sopra i dati inviati saranno davverno pochi e non piu’ riconducibili direttamente ad un vostro account.
 						<br />
@@ -357,12 +357,10 @@
 							<li><a href="https://www.reddit.com/r/privacy/">PRIVACY</a></li>
 						</b>
 					</ul>
-					</p>
-					<h2>Supporto</h2>
-					<p>
-						Se volete supportare la guida con le vostre conoscenze potete contattarmi direttamente su telegram o nel gruppo indicato all’inizio della guida.
-						Per supportare finanziariamente il sito, che ha richiesto e richiedera’ tempo e studio, diventando una sorta di mecenate ed aiutare con i futuri sviluppi ed aggiornamenti contattatemi in privato su telegram oppure utilizzate i tasti
-						donazione nella pagina supporto.
+					<br />
+					<blockquote>"Dire che la privacy e' inutile perche' non si ha nulla da nascondere e' come dire che la liberta' di parola e' inutile perche' non si ha nulla da dire".</blockquote>
+					<br />
+					<p>Se avete apprezzato la guida date un occhiata alla sezione <a href="supporto.html">Donazioni</a>.</p>
 					</p>
 					<hr />
 				</article>

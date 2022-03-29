@@ -271,44 +271,6 @@
 						In caso vogliate essere ulteriormente certi del blocco di internet a queste app potete usare servizi come AFWALL per bloccarle dietro un firewall, non sottovalutate l’accesso ad internet delle app, molte, nonostante non abbia bisogno di
 						quest’ultimo per il funzionamento, lo usano di continuo per condividere nostri dati.
 					</p>
-					<h2>My Android Tools</h2>
-					<p>
-						Questa app ci permette di andare manualmente a bloccare tutti i vari servizi ed attività delle applicazioni, ‘rimuovendo' piccole parti delle app o bloccandone alcune funzionalità.
-						<br />
-						<br />
-						Prima di tutto andiamo nella sezione ‘service’ e tramite il menù in alto a destra clicchiamo su ‘search components in all apps' ed andiamo a cercare le seguenti parole:
-					<ul>
-						<li><b>AdService</b> e blocchiamo tutti i servizi che si chiamano precisamente cosi.</li>
-						<li><b>Analytics</b> e blocchiamo tutti i servizi che contengono questa parola <b>TRANNE</b> quelli dell’applicazione warden</li>
-						<li><b>Google</b> e blocchiamo tutti i servizi <b>TRANNE</b> quelli di MicroG</li>
-						<li><b>Billing</b> e blocchiamo tutti i servizi nelle app in cui non intendiamo fare acquisti</li>
-						<li><b>Crash / report / bug</b> e blocchiamo tutti i servizi che contengono queste parole</li>
-					</ul>
-					Dopo di che andiamo nella sezione broadcast reciver →action →boot completed e disattiviamo tutte le applicazioni che non vogliamo si avviino in automatico (attenzione, le app che disabilitiamo non riceveranno notifiche mentre saranno
-					chiuse, disabilitate quindi le app che non vi serve notare subito le notifiche e/o offline, lasciate attive le varie app di messaggistica ed email).
-					<br />
-					<br />
-					Per concludere andiamo nella sezione activity → menu in alto a destra → search in all components e cerchiamo:
-					<ul>
-						<li><b>Google</b> e disattiviamo tutti i servizi googleAPI tranne quelli di microG e aurora strore.</li>
-						<li><b>Facebook</b> e disabilitate tutte le app in cui non avete bisogno di fare il login tramite facebook</li>
-					</ul>
-					Occasionalmente guardate se installando nuove app ci sono nuovi servizi o attività da bloccare.
-					<br />
-					<br />
-					In caso un app crashi al boot private a riattivare alcuni dei servizi bloccati in modo da individuare cosa la fa crashare, se anche cosi non risolvete provate a re-installarla.
-					</p>
-					<h2>Warden</h2>
-					<p>
-						Questa app fatta dallo stesso creatore dell’Aurora store è eccezionale per bloccare tutti i tracker in modo veloce ed automatico, Warden scansiona tutte le app installate (abilitate dalle impostazioni lo scan anche delle app di sistema)
-						e blocca automaticamente tutti tracker trovati (li confronta offline con il database di exodus privacy, potete disabilitare l’accesso ad internet dell’app), occasionalmente come con my android tool conviene ri-fare il re-scan delle app
-						per bloccare i tracker delle app installate nel frattempo.
-						<br />
-						<br />
-						Per bloccare tutti tracker apriamo l’app, abilitiamo dai settings lo scan delle app di sistema, apriamo il menù laterale a sinistra e andiamo nella sezione <code class="language-plaintext highlighter-rouge">‘labs’</code>, dopo di ché
-						avviamo il servivizio <code class="language-plaintext highlighter-rouge">‘nuke it all’</code>; attendiamo qualche
-						minuto e tutti i tracker trovati nelle nostre app saranno bloccati.
-					</p>
 					<h2="cloud">Cloud e Vpn</h2>
 						<p>
 							Faccio una piccola sezione a parte per questi due sotto-argomenti:

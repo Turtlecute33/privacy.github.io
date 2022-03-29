@@ -182,9 +182,20 @@
 						<li>Scaricare le app da uno store installato in quel profilo (installate Droidify sul profilo principale e pulito mentre aurora in quello sporco e con le app traccianti).</li>
 						<li>Installare apk scaricati da internet (se possibile scaricate tutto da Droidify in quanto è MOLTO piu sicuro).</li>
 					</ul>
+					I due sistemi saranno perfettamente isolati, cosa abbastanza scomoda per la gestione dei contatti, galleria, file, ecc..<br />
+					nelle impostazioni di shelter è possibile attivare una funzione che permette solo all'utente di far parzialmente parlare i due sistemi per la condivisione dei file,
+					nonostante questo la gestione del tutto rimarrà un po' scomoda fino a quando non ci farete l'abitudine.
 					</p>
-					<h2>InviziblePro</h2>
+					<br />
+					<h2>Gestione dei thret model tra i profili</h2>
 					<p>
+						Ora che abbiamo due sistemi completamente diversi e isolati andremo ad applicare un threat model differente in entrambi,
+						nel primo (pulito ed opensource) punteremo alla massima privacy facendo passare tutto il traffico tramite TOR e DNScrypt, nel secondo (sporco e con elementi traccianti)
+						invece punteremo a ridurre il più possibile il leak di nostre informazioni personali, coscienti di utilizzare comunque applicazioni che probabilmente hanno già i nostri dati personali
+						(andremo quindi a limitare il più possibile pubblicità e trackers).<br /><br />
+						Come prima cosa ci concentriamo sul main profile ed andiamo a scaricare <a href="https://www.f-droid.org/packages/pan.alexander.tordnscrypt.stable/">InviziblePro</a>,
+						un applicazione che reindirizzerà tutto il traffico sotto tor e con anche ulteriori protezioni.<br />
+
 
 					</p>
 
@@ -273,50 +284,50 @@
 					</p>
 
 					<h2 id="cloud">Cloud e Vpn</h2>
-						<p>
-							Faccio una piccola sezione a parte per questi due sotto-argomenti:
-							La migliore soluzione cloud sarebbe il self hosting con nextcloud (a mio parere la miglior scelta ), in caso ciò non sia possibile la soluzione a mio parere piu semplice e veloce è <a href="http://mega.nz/">Mega.nz</a> (20gb gratis e
-							5gb di bandwith ed accetta
-							pagamento in bitcoin per i pro plans) se vogliamo invece una sicurezza aggiuntive possiamo usare un cloud con il supporto a WebDav come icedrive in combinazione con <a href="https://cryptomator.org/">Cryptomator</a> (programma che
-							cripta i file prima dell’upload in cloud).
-							<br />
-							<br />
-							Il discorso VPN invece è particolare, una vpn teoricamente cripta il nostro traffico e lo fa passare attraverso un suo nodo mettendosi tra noi e il nostro ISP andando cosi a darci privacy verso di esso ma obbligandoci a fidarci del
-							servizio vpn stesso.
-							<br />
-							Tutti le aziende in questo settore promettono privacy e politiche di no logging ma praticamente il 99% delle VPN più che darci privacy ce la fanno perdere, l’unica che mi sento davvero di consigliarvi è <a href="https://mullvad.net/en/">Mullvad</a> (<a href="http://o54hon2e2vj6c7m3aqqu6uyece65by3vgoxxhlqlsvkmacw6a7m7kiad.onion/en/">onion link</a>),è ovviamente
-							obbligatorio pagarla in bitcoin per avere un privacy maggiore.
-						</p>
-						<h2 id="conc">Conclusioni Finali</h2>
-							<p>
-								Seguendo questa guida avremo ridotto drasticamente la condivisione di dati personali, cio’ non garantisce in nessun modo l’anonimato ma solamente aumenta decisamente la privacy nell’utilizzo del dispositivo.
-								<br />
-								<br />
-								L’utilizzo di MicroG (fondamentale se volete ricevere le notifiche a schermo bloccate e volete usare molte app non open source quali quelle bancarie e vari social) lascia che comunque una piccola quantita’ di dati venga inviata a
-								dei
-								server google ma se seguite correttamente cio’ che ho scritto sopra i dati inviati saranno davverno pochi e non piu’ riconducibili direttamente ad un vostro account.
-								<br />
-								se volete verificare quali app comunicano con internet e/o condividono vostri dati potete utilizzare applicazioni come <a href="https://github.com/emanuele-f/PCAPdroid">PCAPdroid</a> per analizzare il traffico dati creando una VPN
-								fittizia con cui filtrate il flusso di dati proveniente dal
-								vostro cellulare, un altra opzione e’ usare wireshark sul vostro pc mentre siete connessi con il cellulare al wifi.
-								<br />
-								<br />
-								altri ottimi posti per rimanere aggiornati in ambito privacy e degoogle sono vari subreddit:
-							<ul>
-								<b>
-									<li><a href="https://www.reddit.com/r/degoogle/">DEGOOGLE</a></li>
-									<li><a href="https://www.reddit.com/r/privacytools/">PRIVACYTOOLS</a></li>
-									<li><a href="https://www.reddit.com/r/privacy/">PRIVACY</a></li>
-								</b>
-							</ul>
-							</p>
-							<h2>Supporto</h2>
-							<p>
-								Se volete supportare la guida con le vostre conoscenze potete contattarmi direttamente su telegram o nel gruppo indicato all’inizio della guida.
-								Per supportare finanziariamente il sito, che ha richiesto e richiedera’ tempo e studio, diventando una sorta di mecenate ed aiutare con i futuri sviluppi ed aggiornamenti contattatemi in privato su telegram oppure utilizzate i tasti
-								donazione nella pagina supporto.
-							</p>
-							<hr />
+					<p>
+						Faccio una piccola sezione a parte per questi due sotto-argomenti:
+						La migliore soluzione cloud sarebbe il self hosting con nextcloud (a mio parere la miglior scelta ), in caso ciò non sia possibile la soluzione a mio parere piu semplice e veloce è <a href="http://mega.nz/">Mega.nz</a> (20gb gratis e
+						5gb di bandwith ed accetta
+						pagamento in bitcoin per i pro plans) se vogliamo invece una sicurezza aggiuntive possiamo usare un cloud con il supporto a WebDav come icedrive in combinazione con <a href="https://cryptomator.org/">Cryptomator</a> (programma che
+						cripta i file prima dell’upload in cloud).
+						<br />
+						<br />
+						Il discorso VPN invece è particolare, una vpn teoricamente cripta il nostro traffico e lo fa passare attraverso un suo nodo mettendosi tra noi e il nostro ISP andando cosi a darci privacy verso di esso ma obbligandoci a fidarci del
+						servizio vpn stesso.
+						<br />
+						Tutti le aziende in questo settore promettono privacy e politiche di no logging ma praticamente il 99% delle VPN più che darci privacy ce la fanno perdere, l’unica che mi sento davvero di consigliarvi è <a href="https://mullvad.net/en/">Mullvad</a> (<a href="http://o54hon2e2vj6c7m3aqqu6uyece65by3vgoxxhlqlsvkmacw6a7m7kiad.onion/en/">onion link</a>),è ovviamente
+						obbligatorio pagarla in bitcoin per avere un privacy maggiore.
+					</p>
+					<h2 id="conc">Conclusioni Finali</h2>
+					<p>
+						Seguendo questa guida avremo ridotto drasticamente la condivisione di dati personali, cio’ non garantisce in nessun modo l’anonimato ma solamente aumenta decisamente la privacy nell’utilizzo del dispositivo.
+						<br />
+						<br />
+						L’utilizzo di MicroG (fondamentale se volete ricevere le notifiche a schermo bloccate e volete usare molte app non open source quali quelle bancarie e vari social) lascia che comunque una piccola quantita’ di dati venga inviata a
+						dei
+						server google ma se seguite correttamente cio’ che ho scritto sopra i dati inviati saranno davverno pochi e non piu’ riconducibili direttamente ad un vostro account.
+						<br />
+						se volete verificare quali app comunicano con internet e/o condividono vostri dati potete utilizzare applicazioni come <a href="https://github.com/emanuele-f/PCAPdroid">PCAPdroid</a> per analizzare il traffico dati creando una VPN
+						fittizia con cui filtrate il flusso di dati proveniente dal
+						vostro cellulare, un altra opzione e’ usare wireshark sul vostro pc mentre siete connessi con il cellulare al wifi.
+						<br />
+						<br />
+						altri ottimi posti per rimanere aggiornati in ambito privacy e degoogle sono vari subreddit:
+					<ul>
+						<b>
+							<li><a href="https://www.reddit.com/r/degoogle/">DEGOOGLE</a></li>
+							<li><a href="https://www.reddit.com/r/privacytools/">PRIVACYTOOLS</a></li>
+							<li><a href="https://www.reddit.com/r/privacy/">PRIVACY</a></li>
+						</b>
+					</ul>
+					</p>
+					<h2>Supporto</h2>
+					<p>
+						Se volete supportare la guida con le vostre conoscenze potete contattarmi direttamente su telegram o nel gruppo indicato all’inizio della guida.
+						Per supportare finanziariamente il sito, che ha richiesto e richiedera’ tempo e studio, diventando una sorta di mecenate ed aiutare con i futuri sviluppi ed aggiornamenti contattatemi in privato su telegram oppure utilizzate i tasti
+						donazione nella pagina supporto.
+					</p>
+					<hr />
 				</article>
 			</section>
 		</div>

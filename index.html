@@ -199,12 +199,28 @@
 						rechiamoci quindi nelle impostazioni del telefono nella sezione rete -> avanzate/VPN -> InvisiblePro qui attiviamo la modalità 'VPN sempre attiva' e
 						'blocca connessioni senza VPN', in questo modo tutto il traffico passerà attraverso Invisible ed eviteremo qualsiasi leak di dati.<br /><br />
 						Ora che abbiamo impostato correttamente la rete andiamo a modificare alcune impostazioni all'interno di Invisible:
-						<ul>
-							  <li>
-									  in <b>DNSCrypt settings</b> nella terza sezione abilitiamo require_dnssec, nolog and nofilter, questo ci permetterà di usare sempre i
-										migliori server DNS possibili.
-								</li>
-						</ul>
+					<ul>
+						<li>
+							in <b>DNSCrypt settings</b> nella terza sezione abilitiamo require_dnssec, nolog and nofilter, questo ci permetterà di usare sempre i
+							migliori server DNS possibili.
+						</li>
+						<li>
+							Nella sezione <b>Fast Settings</b> abilitiamo 'avvia DNSCrypt all'avvio' e 'avvia TOR all'avvio', in questo modo saremo sempre protetti al 100%.
+						</li>
+						<li>
+							Sempre nella sezione <b>Fast Settings</b>, in fondo, abilitiamo l'update automatico attraverso TOR (facoltativo).
+						</li>
+						<li>
+							Sempre nelle impostazioni rechiamoci in <b>Common Settings</b> e abilitiamo tutte e 3 le protezioni della sezione <b>MITM attack detection</b>,
+							queste proteggeranno il nostro dispositivo quando connessi a wifi pubblici.
+						</li>
+						<li>
+							Infine rechiamoci nella categoria <b>Firewall</b> e disabilitiamo l'accesso ad internet a tutte le applicazioni che non ne hanno bisogno (come per esempio la galleria, la tastiera, i giochi offline, ecc)
+						</li>
+					</ul>
+					a questo punto il main profile è pronto per essere usato, ci possiamo ora dedicare al profilo di lavoro, quello con le applicazioni non open source.<br /><br />
+
+					
 
 
 

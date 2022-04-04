@@ -49,10 +49,6 @@
                 buttonTitle: 'Donate {coinName}',
                 coins: {
                     bitcoin: 'Bitcoin',
-                    ethereum: 'Ether',
-                    litecoin: 'Litecoin',
-                    monero: 'Monero',
-                    iota: 'IOTA',
                     lightning: 'lightning',
                 },
                 dialogHeader: 'Donate {coinName}',

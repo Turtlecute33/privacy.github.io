@@ -56,7 +56,7 @@
                 openInWallet: 'Click here to send this address to your wallet.'
             },
 
-            baseURL: '../CryptoDonateButton/src/',
+            baseURL: 'CryptoDonateButton/src/',
             buttonLarge: false,
             buttonClass: '',
 

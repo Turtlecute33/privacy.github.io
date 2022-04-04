@@ -1,5 +1,5 @@
 (function() {
-    var rootURL = '//lab.subinsb.com/projects/francium/cryptodonate/';
+    var rootURL = '../';
     window.Fr = window.Fr || {};
 
     Fr.loadCD = function(target, options) {

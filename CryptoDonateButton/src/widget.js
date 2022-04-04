@@ -1,5 +1,5 @@
 (function() {
-    var rootURL = '../CryptoDonateButton/src';
+    var rootURL = '../CryptoDonateButton/src/';
     window.Fr = window.Fr || {};
 
     Fr.loadCD = function(target, options) {

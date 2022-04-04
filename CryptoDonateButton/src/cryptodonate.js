@@ -23,7 +23,7 @@
 
 (function(window) {
     /**
-     * Merge two JSON objects
+     * Merge two JSON object
      * @param  {obj} obj1 Object to merge to
      * @param  {obj} obj2 Object to merge
      * @return {obj} Merged object

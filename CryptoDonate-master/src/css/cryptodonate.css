@@ -1,0 +1,159 @@
+.cryptodonate-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #DDD;
+    color: #000;
+    cursor: pointer;
+    font-family: Arial;
+}
+
+.cryptodonate-btn:hover {
+    background: #EEE;
+}
+
+.cryptodonate-btn.large {
+    padding: 13px 15px;
+    font-size: 1.5rem;
+}
+
+.cryptodonate-btn img, .cryptodonate-btn span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cryptodonate-btn img {
+    height: 16px;
+    width: 16px;
+}
+
+.cryptodonate-btn.large img {
+    height: 32px;
+    width: 32px;
+}
+
+.cryptodonate-btn span {
+    margin-left: 5px;
+}
+
+#cryptodonate-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#cryptodonate-dialog {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 400px;
+    padding: 20px 20px 10px;
+    border-radius: 10px;
+    background: #ddd;
+    color: #000;
+    z-index: 9999999;
+    box-sizing: border-box;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+    font-family: Arial;
+}
+
+#cryptodonate-dialog * {
+    box-sizing: border-box;
+}
+
+#cryptodonate-addressHolder {
+    position: relative;
+    border-bottom: 3px solid #790cfc;
+    padding-bottom: 1em;
+}
+
+#cryptodonate-coin {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 4px;
+    left: 5px;
+}
+
+#cryptodonate-address {
+    height: 32px;
+    width: 100%;
+    padding: 5px 30px 5px 30px;
+    color: #000;
+    font: 13.3333px Arial;
+}
+
+#cryptodonate-wallet {
+    position: absolute;
+    display: block;
+    top: 4px;
+    right: 5px;
+    height: 24px;
+    width: 24px
+}
+
+#cryptodonate-wallet img {
+    height: 100%;
+    width: 100%;
+}
+
+#cryptodonate-action {
+    font-size: 2rem;
+    margin-bottom: .5em;
+    border-bottom: 3px solid #790cfc;
+    padding-bottom: .25em;
+}
+
+#cryptodonate-qrHolder {
+    position: relative;
+    background: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 1em;
+}
+
+#cryptodonate-qr {
+    height: 200px;
+    width: 200px;
+}
+
+
+/**
+ * Don't be evil. Please let this credit be seen
+ */
+
+#cryptodonate-credit {
+    display: block;
+    margin-top: 30px;
+    color: #000;
+    text-decoration: none;
+}
+
+#cryptodonate-close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+@media (max-width: 410px) {
+    #cryptodonate-dialog {
+        width: 100%;
+        padding: 20px 10px 30px;
+    }
+}
+
+@media (max-width: 250px) {
+    #cryptodonate-qr {
+        width: 100%;
+        height: auto;
+    }
+}

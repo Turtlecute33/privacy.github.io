@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../src/css/cryptodonate.css" rel="stylesheet"/>
+        <link href="../src/css/cryptodonate.dark.css" rel="stylesheet"/>
+        <link href="../src/css/cryptodonate.pink.css" rel="stylesheet"/>
+        <link href="../src/css/cryptodonate.green.css" rel="stylesheet"/>
+        <title>
+            CryptoDonate
+        </title>
+    </head>
+    <body>
+        <div id="content">
+            <table>
+                <thead>
+                    <th>
+                    </th>
+                    <th>
+                        Bitcoin
+                    </th>
+                    <th>
+                        Ethereum
+                    </th>
+                    <th>
+                        Litecoin
+                    </th>
+                    <th>
+                        Monero
+                    </th>
+                    <th>
+                        IOTA
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Normal
+                        </td>
+                        <td>
+                            <div class="bitcoin">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ethereum">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="litecoin">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="monero">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="iota">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Large
+                        </td>
+                        <td>
+                            <div class="bitcoin large">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ethereum large">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="litecoin large">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="monero large">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="iota large">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Dark
+                        </td>
+                        <td>
+                            <div class="bitcoin" data-theme="dark">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ethereum" data-theme="dark">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="litecoin" data-theme="dark">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="monero" data-theme="dark">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="iota" data-theme="dark">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Pink
+                        </td>
+                        <td>
+                            <div class="bitcoin" data-theme="pink">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ethereum" data-theme="pink">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="litecoin" data-theme="pink">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="monero" data-theme="pink">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="iota" data-theme="pink">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Green
+                        </td>
+                        <td>
+                            <div class="bitcoin" data-theme="green">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ethereum" data-theme="green">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="litecoin" data-theme="green">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="monero" data-theme="green">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="iota" data-theme="green">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script>
+            !function(c){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.onload=c,t.src="../src/cryptodonate.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}(function(){
+
+                    var coins = {
+                        'bitcoin': '3Q2zmZA3LsW5JdxkJEPDRbsXu2YzzMQmBQ',
+                        'ethereum': '0xF9744E1504a1ACB0493E6482525312d50af2785D',
+                        'litecoin': 'LTQhef3dKB7vwdCGuhEuJvtDuemQEFEGvP',
+                        'monero': '463ZgKoBzN4WXaQPMVvCHHBe8ZE7cg44Q5mukaWfnZ2ngxUXYTaAg5jbxiBfk2jKyCSEB3qDHwmEgNL6KWqpBc2i9As4ez3',
+                        'iota': 'AYIZGKYKUNZASMIVXEUQCOZFHEOYPJTMVC9CHOAVSPCNHTTPVDNVBLUOFRGBROIIPDPOLDO9HAAWZS9SDUYAUUR9RY'
+                    };
+                    var coinNames = Object.keys(coins);
+
+                    for (var i = 0;i < coinNames.length;i++) {
+                        var coin = coinNames[i];
+                        var address = coins[coin];
+                        var elems = document.getElementsByClassName(coin);
+
+                        for(var j = 0;j < elems.length;j++) {
+                            var cd = new Fr.CryptoDonate({
+                                coin: coin,
+                                address: address,
+                                baseURL: '../src/',
+                                buttonLarge: elems[j].className.match('large') !== null,
+
+                                buttonClass: elems[j].getAttribute('data-theme'),
+                                dialogClass: elems[j].getAttribute('data-theme')
+                            });
+                            cd.appendTo(elems[j]);
+                        }
+                    }
+              });
+        </script>
+    </body>
+</html>

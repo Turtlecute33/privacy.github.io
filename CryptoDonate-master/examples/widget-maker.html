@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Compiled and minified CSS -->
+        <link async="async" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet"/>
+        <link async="async" href="../src/css/cryptodonate.css" rel="stylesheet"/>
+        <link href="../src/css/cryptodonate.dark.css" rel="stylesheet"/>
+        <link href="../src/css/cryptodonate.pink.css" rel="stylesheet"/>
+        <link href="../src/css/cryptodonate.green.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h2>
+            Add CryptoDonate Widget
+        </h2>
+        <div id="content">
+            <div class="row">
+                <div class="col s12 m6 l4" id="form">
+                    <div class="input-field col s12">
+                        <div for="coin">
+                            Coin
+                        </div>
+                        <select id="coin" class="browser-default">
+                            <option value="bitcoin">
+                                Bitcoin
+                            </option>
+                            <option value="litecoin">
+                                Litecoin
+                            </option>
+                            <option value="ethereum">
+                                Ethereum
+                            </option>
+                            <option value="monero">
+                                Monero
+                            </option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12">
+                        <div for="address">
+                            Wallet Address
+                        </div>
+                        <input class="validate" id="address" placeholder="Wallet Address" type="text" value="3Q2zmZA3LsW5JdxkJEPDRbsXu2YzzMQmBQ"/>
+                    </div>
+                    <div class="input-field col s12">
+                        <div for="size">
+                            Size
+                        </div>
+                        <select id="size" class="browser-default">
+                            <option value="">
+                                Normal
+                            </option>
+                            <option value="large">
+                                Large
+                            </option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12">
+                        <div for="theme">
+                            Theme
+                        </div>
+                        <select id="theme" class="browser-default">
+                            <option value="">
+                                Light
+                            </option>
+                            <option value="dark" selected="selected">
+                                Dark
+                            </option>
+                            <option value="pink" selected="selected">
+                                Pink
+                            </option>
+                            <option value="green" selected="selected">
+                                Green
+                            </option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12 center-align">
+                        <a class="btn green" id="update">
+                            Get Code
+                        </a>
+                    </div>
+                </div>
+                <div class="col s12 m6 l8" id="preview">
+                    <div id="btn-preview">
+                    </div>
+                    <p>
+                        Use this code to display it wherever you want :
+                    </p>
+                    <pre id="code-wrapper"><code id="code"></code></pre>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+        <script src="../src/cryptodonate.js">
+        </script>
+        <script src="widget-maker.js">
+        </script>
+        <style>
+            #preview {
+                border: 2px dashed #000;
+                padding: 20px 10px;
+            }
+            #code-wrapper {
+                padding-left: 2em;
+            }
+        </style>
+    </body>
+</html>

@@ -56,7 +56,7 @@
                 openInWallet: 'Click here to send this address to your wallet.'
             },
 
-            baseURL: '//lab.subinsb.com/projects/francium/cryptodonate',
+            baseURL: '../',
             buttonLarge: false,
             buttonClass: '',
 

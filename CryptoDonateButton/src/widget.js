@@ -17,7 +17,7 @@
         }
 
         /**
-         * Load CryptoDonate asynchornously
+         * Load CryptoDonate asynchornouslyy
          */
         if (!document.getElementById('loadCD-css')) {
             loadCSS('cryptodonate.css');

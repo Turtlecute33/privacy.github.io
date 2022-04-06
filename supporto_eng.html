@@ -36,13 +36,29 @@
 	<script>
 		! function(c) {
 			var t = document.createElement("script");
-			t.type = "text/javascript", t.async = !0, t.onload = c, t.src = "//lab.subinsb.com/projects/francium/cryptodonate/widget.js";
+			t.type = "text/javascript", t.async = !0, t.onload = c, t.src = "CryptoDonateButton/src/widget.js";
 			var e = document.getElementsByTagName("script")[0];
 			e.parentNode.insertBefore(t, e)
 		}(function() {
-			Fr.loadCD("cd301", {
+			Fr.loadCD("bitcoin", {
 				coin: "bitcoin",
-				address: "bc1qdsmslp74jsp9m5v72hny5ge0svr6c4zc4pwxxl",
+				address: "bc1qpcfagedq6tqf55lr0cqzlywsewq07p682r7p5a",
+				buttonClass: "large",
+				dialogClass: "large",
+			});
+		});
+	</script>
+
+	<script>
+		! function(c) {
+			var t = document.createElement("script");
+			t.type = "text/javascript", t.async = !0, t.onload = c, t.src = "CryptoDonateButton/src/widget.js";
+			var e = document.getElementsByTagName("script")[0];
+			e.parentNode.insertBefore(t, e)
+		}(function() {
+			Fr.loadCD(document.getElementById('lightning'), {
+				coin: "lightning",
+				address: "LNURL1DP68GURN8GHJ7MRW9E6XJURN9UH8WETVDSKKKMN0WAHZ7MRWW4EXCUP0X9URVEFC8YMRXDE5XPJKGDENV56RX7Q9TT6",
 				buttonClass: "large",
 				dialogClass: "large",
 			});
@@ -83,7 +99,7 @@
 					<pre><code class="language-term">Crypto donations</code></pre>
 		</div>
 		<div style="margin-left:4%;">
-			<div id="cd301"></div>
+			<span id="bitcoin"></span> &nbsp <span id="lightning"></span>
 			<br />
 			<br />
 			<p>If you need to contact me by email (you can even crypt the mail with <a href="https://pgp.vado.li/">my PGP key</a>) you can do it to:</p>

@@ -40,11 +40,11 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
-		a{
-			word-break: break-all;
+		a,li,p{
+			word-break: break-word;
 		}
-		li{
-			word-break: break-all;
+		table{
+			word-break:break-all;
 		}
 	</style>
 	<!-- End Jekyll SEO tag -->
@@ -210,7 +210,7 @@
 							Alla fine il tuo RaspiBlitz dovrebbe assomigliare a questo:
 							<img src="https://raw.githubusercontent.com/rootzoll/raspiblitz/v1.7/pictures/hardwaresetup.jpg">
 							<br>
-							<div id="scarica"></div><b>Scaricare il software</b>
+							<div id="scarica"></div><h2>Scaricare il software</h2>
 							<br>
 							<br>
 							<table>
@@ -491,7 +491,7 @@
 							ma questi diventeranno più lenti in quanto i blocchi inizieranno ad essere più pieni. La CPU del tuo RaspberryPi diventerà molto calda durante la sincronizzazione iniziale. 
 							Tuttavia questo va bene in quanto il RaspberryPi ha delle protezioni contro il surriscaldamento e questo assicura che la CPU non sarà surriscaldata in modo critico.
 							<br><br>
-							<div id="menu"></div><b>Menu princiaple</b>
+							<div id="menu"></div><h2>Menu princiaple</h2>
 							<br>
 							Quando la blockchain sarà sincronizzata potrai entrare nel menu principale di SSH:
 							<br><br>
@@ -516,7 +516,7 @@
 							*Amiamo sempre guardare nuovo foto di RaspiBlitz aggiunti alla rete, tagga @rootzoll nelle immagini su twitter. 
 							C'è anche una <a href="https://raspiblitz.org/#donation">Pagina di donazioni RaspiBlitz</a> perché non provare a mandare qualche satoshi qui con il tuo nuovo RaspiBlitz :D *
 							<br><br>
-							<div id="documentazione"></div><b>Documentazione delle caratteristiche</b>
+							<div id="documentazione"></div><h2>Documentazione delle caratteristiche</h2>
 							Queste sono tutte le caratteristiche disponibili attraverso il menu SSH di RaspiBlitz. Loro hanno l'obiettivo di offrire alcune funzionalità e configurazioni di base/recupero.
 							Attività più complicate o facili da utilizzare sono migliori da fare con wallet, applicazioni e script che connetti al tuo nodo Lightning attraverso le 
 							<a href="https://github.com/rootzoll/raspiblitz#interface--apis">API</a> : perché tu hai un nodo bitcoin e un nodo lightning nel tuo RaspiBlitz. 
@@ -1159,7 +1159,7 @@
 							<br><br>
 							<img src="https://github.com/rootzoll/raspiblitz/raw/v1.7/pictures/clrepair.png">
 							<br><br>
-							<div id="importa"></div><b>MIGRATION: Migra i dati di Blitz ad un nuovo Hardware</b>
+							<div id="importa"></div><h2>MIGRATION: Migra i dati di Blitz ad un nuovo Hardware</h2>
 							<br>
 							Questa opzione ferma il tuo RaspiBlitz e crea un file di migrazione in formato ZIP che puoi scaricare/esportare con SCP sul tuo laptop. Questo file contiene 
 							tutti i dati importanti del tuo RaspiBlitz incluso LND, la tua configurazione Blitz e anche dati dalle tue applicazioni installate. Può essere utilizzato per 
@@ -1210,7 +1210,7 @@
 							<br>
 							Le opzioni sono spiegate nel dettaglio:
 							<br><br>
-							<img src="https://github.com/rootzoll/raspiblitz/blob/v1.7/pictures/update.png">
+							<img src="https://github.com/rootzoll/raspiblitz/blob/v1.7/pictures/update.png?raw=true">
 							<br><br>
 							<i>Per favore nota che RaspiBlitz non supporta nessuna forma di aggiornamenti automatici. Questo è fatto per assicurare che non ci siano 
 								controlli remoti del tuo nodo da un server centrale.
@@ -1266,13 +1266,13 @@
 							Se vuoi importarlo di nuovo su un nuovo RaspiBlitz (ad esempio con un aggiornamento dell'HDD/SSD), puoi scegliere l'opzione "FROMBACKUP" nella prima 
 							pagina di configurazione in una nuova immagine della scheda SD.
 							<br><br>
-							<img src="https://github.com/rootzoll/raspiblitz/blob/v1.7/pictures/ssh0-welcome2.png">
+							<img src="https://github.com/rootzoll/raspiblitz/blob/v1.7/pictures/ssh0-welcome2.png?raw=true">
 							<br><br>
 							Se vuoi iniziare una migrazione ti verrà chiesto se vuoi usare una blockchain esistente nell'HDD/SSD ed eliminare il resto, o come preferisci formattare 
 							l'intero disco. Una volta che avrai completato ti verranno mostrate le istruzioni su come caricare il file di migrazione (usa la password "raspiblitz" quando 
 							richiesto nell'esecuzione del comando di caricamento).
 							<br><br>
-							<img src="https://github.com/rootzoll/raspiblitz/blob/v1.7/pictures/migration1.png">
+							<img src="https://github.com/rootzoll/raspiblitz/blob/v1.7/pictures/migration1.png?raw=true">
 							<br><br>
 							Dopo ti verrà richiesto di impostare una nuova password A, e il tuo RaspiBlitz andrà in un processo di recupero. 
 							<br>
@@ -1280,7 +1280,7 @@
 							<br>
 							Quindi la blockchain avrà bisogno di sincronizzarsi e tornerai alla normalità. 
 							<br><br>
-							<div id="umbrel"></div><b>Creare un RaspiBlitz da Umbrel, Citadel o MyNode</b>
+							<div id="umbrel"></div><h2>Creare un RaspiBlitz da Umbrel, Citadel o MyNode</h2>
 							<br>
 							Un altro tipo di migrazione è quando hai già un full node con Umbrel, Citadel o MyNode e vorresti passare a RaspiBlitz senza chiudere i canali. Hai già 
 							tutto l'hardware necessario e vuoi solo cambiare software. Non hai bisogno del display LCD: RaspiBlitz può funzionare anche senza di esso.
@@ -1329,7 +1329,7 @@
 							Riprova ad accedere ancora via SSH dopo un riavvio. Può richiedere un po' di tempo dopo un riavvio prima che il sistema operativo e il servizio SSH 
 							si avvii, quindi fai diverse prove ad intervalli fino al successo.
 							<br><br>
-							<div id="interfacce"></div><b>Interfaccia/API</b>
+							<div id="interfacce"></div><h2>Interfaccia/API</h2>
 							<br>
 							Per sviluppare i tuoi script/applicazioni e connettere altri servizi/applicazioni al tuo RaspiBlitz hai diverse interfacce/API disponibili:
 							<br>
@@ -1366,7 +1366,7 @@
 							</ul>
 							<br><br>
 							Dovresti aver scritto le parole del seed durante la configurazione del wallet, tienile in una posizione sicura offline. Il file "channel.backup" è mantenuto nell'HDD 
-							(sotto /mnt/hdd/lnd/data/chain/bitcoin/mainnet/) e aggiornato da LND ogni volta un nuovo canale è aperto o chiuso. L'ultima versione del file è necessaria per 
+							(sotto /mnt/hdd/lnd/data/chain/<br>bitcoin/mainnet/) e aggiornato da LND ogni volta un nuovo canale è aperto o chiuso. L'ultima versione del file è necessaria per 
 							recuperare tutti i tuoi fondi. Nel caso il tuo HDD sia stato danneggiato RaspiBlitz mantiene sempre una seconda copia dell'ultima versione del file "channel.backup" 
 							nella scheda SD: "/home/admin/backups/scb/" . 
 							<br>
@@ -1393,16 +1393,17 @@
 							<br>
 							<i>Puoi anche fare il backup del backup statico dei canali sul tuo server, ma questo ha bisogno di una configurazione manuale: </i>
 							<br><br>
-							Nel "/mnt/hdd/raspiblitz.conf" il parametro "scpBackupTarget='[USER]@[SERVER]:[DIRPATH-WITHOUT-ENDING-/]'" può essere impostato per abilitare questa caratteristica.
+							Nel "/mnt/hdd/raspiblitz.conf" il parametro "scpBackupTarget='[USER]@
+							<br>[SERVER]:[DIRPATH-WITHOUT-ENDING-/]'" può essere impostato per abilitare questa caratteristica.
 							Su un server remoto, la chiave pubblica dell'utente root di RaspiBlitz ha bisogno di essere aggiunta al file "authorized_keys" in modo che non ci sia bisogno di 
 							una password per lo script in background per fare il backup. 
 							<br>
-							Lo script "/home/admin/config.scripts/blitz.ssh.sh" mostra ("root-get") e trasferisce ssh-pubkey ("root-transfer") ad un server remoto. 
+							Lo script "/home/admin/config.scripts<br>/blitz.ssh.sh" mostra ("root-get") e trasferisce ssh-pubkey ("root-transfer") ad un server remoto. 
 							<br>
 							Per fare una prova, prova ad aprire o chiudere un canale e controlla se trovi una copia del channel.backup nel tuo server remoto. Puoi controllare i log dello script in 
 							background per guardare dettagli sugli errori: "sudo journalctl -f -u background"
 							<br><br>
-							<div id="aggiorna"></div><b>Aggiornare RaspiBlitz ad una nuova versione</b>
+							<div id="aggiorna"></div><h2>Aggiornare RaspiBlitz ad una nuova versione</h2>
 							<br>
 							Se hai un RaspiBlitz più vecchio della versione 1.0, per favore <a href="https://github.com/rootzoll/raspiblitz/blob/v1.7/FAQ.md">guarda qui</a>. 
 							<br>
@@ -1438,7 +1439,7 @@
 								</a></li>
 							</ul>
 							<br><br>
-							<div id="crea"></div><b>Crea l'immagine per la scheda SD</b>
+							<div id="crea"></div><h2>Crea l'immagine per la scheda SD</h2>
 							<br>
 							Un'immagine pronta per l'utilizzo del RaspiBlitz è fornita da noi per essere scaricata, per far in modo che tutti possano iniziare presto 
 							(guarda sotto). Ma se vuoi creare l'immagine da solo - ecco una veloce guida:
@@ -1454,7 +1455,13 @@
 							Ora sei pronto per iniziare lo script per fare la build sulla SD (controlla il codice per vedere se l'installazione e 
 							la configurazione sono OK per te). Copia il seguente comando nel tuo terminale ed esegui:
 							<br>
-							"wget https://raw.githubusercontent.com/rootzoll/raspiblitz/v1.7/build_sdcard.sh && sudo bash build_sdcard.sh"
+							"wget https://raw.githubusercontent.<br>
+							com/
+							rootzoll/raspiblitz/v1.7/
+							<br>
+							build_sdcard.sh && 
+							<br>
+							sudo bash build_sdcard.sh"
 							<br>
 							Come puoi vedere dall'URL, puoi trovare lo script per la build in questa repo di Git sotto "build_sdcard.sh". 
 							<br>
@@ -1486,7 +1493,7 @@
 								</li>
 							</ul>
 							<br><br>
-							<div id="domande"></div><b>FAQ</b>
+							<div id="domande"></div><h2>FAQ</h2>
 							<br>
 							Ecco una piccola selezione di domande chieste spesso:
 							<ul>
@@ -1506,7 +1513,7 @@
 							<br><br>
 							Hai ancora domande? Controlla <a href="https://github.com/rootzoll/raspiblitz/blob/v1.7/FAQ.md">l'archivio delle FAQ RaspiBlitz</a>
 							<br><br>
-							<div id="sviluppo"></div><b>Sviluppo della community</b>
+							<div id="sviluppo"></div><h2>Sviluppo della community</h2>
 							<br>
 							Ognuno è libero di entrare, migliorare, ed estendere il RaspiBlitz: è un work in progress. <a href="https://github.com/rootzoll/raspiblitz/issues">
 								Controlla i problemi 
@@ -1551,4 +1558,3 @@
 </body>
 
 </html>
-
